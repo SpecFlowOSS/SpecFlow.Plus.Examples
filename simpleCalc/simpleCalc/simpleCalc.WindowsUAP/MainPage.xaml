@@ -6,7 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <local:DoubleConverter x:Key="DoubleConverter" />
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -22,27 +24,27 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Margin="5">Operand 1</TextBlock>
-        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
-        
-        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Path=Operand1, Mode=TwoWay, Converter={StaticResource DoubleConverter}}"></TextBox>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <RadioButton Grid.Column="0">Plus</RadioButton>
-            <RadioButton Grid.Column="1">Minus</RadioButton>
-            <RadioButton Grid.Column="2">Multiply</RadioButton>
-            <RadioButton Grid.Column="3">Devide</RadioButton>
+            <RadioButton Grid.Column="0" IsChecked="{Binding Path=PlusOperator, Mode=TwoWay}">Plus</RadioButton>
+            <RadioButton Grid.Column="1" IsChecked="{Binding Path=MinusOperator, Mode=TwoWay}">Minus</RadioButton>
+            <RadioButton Grid.Column="2" IsChecked="{Binding Path=MultiplyOperator, Mode=TwoWay}">Multiply</RadioButton>
+            <RadioButton Grid.Column="3" IsChecked="{Binding Path=DivideOperator, Mode=TwoWay}">Divide</RadioButton>
         </Grid>
 
         <TextBlock Grid.Row="2" Grid.Column="0" Margin="5">Operand 2</TextBlock>
-        <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=Operand2, Mode=TwoWay, Converter={StaticResource DoubleConverter}}"></TextBox>
 
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">Calculate</Button>
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="5,10,5,10" Command="{Binding Path=CalcCommand}">Calculate</Button>
 
         <TextBlock Grid.Row="4" Grid.Column="0" Margin="5">Result</TextBlock>
-        <TextBox Grid.Row="4" Grid.Column="1" IsReadOnly="True" IsEnabled="False"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1" IsReadOnly="True" IsEnabled="False" Text="{Binding Path=Result, Converter={StaticResource DoubleConverter}}"></TextBox>
     </Grid>
 </Page>
