@@ -164,7 +164,7 @@ ecf/
 rcf/
 
 # Microsoft Azure ApplicationInsights config file
-ApplicationInsights.config
+#ApplicationInsights.config
 
 # Windows Store app package directory
 AppPackages/
@@ -182,7 +182,6 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
-*.pfx
 *.publishsettings
 node_modules/
 orleans.codegen.cs
