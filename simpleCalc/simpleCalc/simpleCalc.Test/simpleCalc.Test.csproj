@@ -86,6 +86,9 @@
       <LastGenOutput>Calc1.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Report\ReportTemplate.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>

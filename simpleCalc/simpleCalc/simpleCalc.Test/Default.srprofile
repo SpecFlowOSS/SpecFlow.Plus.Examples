@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestProfile xmlns="http://www.specrun.com/schemas/2011/09/TestProfile">
-  <Settings projectName="simpleCalc.Test" projectId="{6baf319b-9d0d-461a-a7be-9e627e0a8424}" />
-  <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential"  retryCount="0"/>
-  <!-- For collecting by a SpecRun server update and enable the following element. For using the 
-      collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
-    <Server serverUrl="http://specrunserver:6365" publishResults="true" />
-  -->
+  <Settings projectName="simpleCalc.Test" projectId="{6baf319b-9d0d-461a-a7be-9e627e0a8424}" reportTemplate="Report\\ReportTemplate.cshtml" />
+  <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential" retryCount="0"/>
+
   <TestAssemblyPaths>
     <TestAssemblyPath>simpleCalc.Test.dll</TestAssemblyPath>
   </TestAssemblyPaths>
-  <DeploymentTransformation>
-    <Steps>
-      <!-- sample config transform to change the connection string-->
-      <!--<ConfigFileTransformation configFile="App.config">
-        <Transformation>
-          <![CDATA[<?xml version="1.0" encoding="utf-8"?>
-							<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-                <connectionStrings>
-                  <add name="MyDatabase" connectionString="Data Source=.;Initial Catalog=MyDatabaseForTesting;Integrated Security=True" 
-                       xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
-                </connectionStrings>
-							</configuration>
-						]]>
-        </Transformation>
-      </ConfigFileTransformation>-->
-    </Steps>
-  </DeploymentTransformation>
   <Targets>
     <Target name="ViewModel">
       <DeploymentTransformationSteps>
@@ -61,7 +41,6 @@
             ]]>
           </Transformation>
         </ConfigFileTransformation>
-        <!--<IISExpress port="12578" webAppFolder="..\simpleCalc.Web"/>-->
       </DeploymentTransformationSteps>
     </Target>
   </Targets>
