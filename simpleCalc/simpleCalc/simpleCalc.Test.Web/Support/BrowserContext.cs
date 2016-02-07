@@ -23,7 +23,7 @@ namespace simpleCalc.Test.Web.Support
 
         public BrowserContext()
         {
-            BaseUrl = new Uri("http://localhost:12578"); //TODO: config
+            BaseUrl = new Uri("http://localhost:12578"); 
         }
 
         public void NavigateTo(string path)

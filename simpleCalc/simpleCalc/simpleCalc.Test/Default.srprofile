@@ -28,9 +28,41 @@
   </DeploymentTransformation>
   <Targets>
     <Target name="ViewModel">
+      <DeploymentTransformationSteps>
+        <ConfigFileTransformation configFile="App.config">
+          <Transformation>
+            <![CDATA[<?xml version="1.0" encoding="utf-8"?>
+        	    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+                  <specFlow>
+                    <stepAssemblies>
+                      <stepAssembly xdt:Transform="Remove" />
+                      <stepAssembly assembly="simpleCalc.Test.ViewModel" xdt:Transform="Insert"/>
+                    </stepAssemblies>   
+                  </specFlow>
+				</configuration>
+            ]]>
+          </Transformation>
+        </ConfigFileTransformation>
+      </DeploymentTransformationSteps>
     </Target>
     <Target name="Web">
-      
+      <DeploymentTransformationSteps>
+        <ConfigFileTransformation configFile="App.config">
+          <Transformation>
+            <![CDATA[<?xml version="1.0" encoding="utf-8"?>
+			    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+                  <specFlow>
+                    <stepAssemblies>
+                      <stepAssembly xdt:Transform="Remove" />
+                      <stepAssembly assembly="simpleCalc.Test.Web" xdt:Transform="Insert"/>
+                    </stepAssemblies>               
+                  </specFlow>
+				</configuration>
+            ]]>
+          </Transformation>
+        </ConfigFileTransformation>
+        <!--<IISExpress port="12578" webAppFolder="..\simpleCalc.Web"/>-->
+      </DeploymentTransformationSteps>
     </Target>
   </Targets>
 </TestProfile>
