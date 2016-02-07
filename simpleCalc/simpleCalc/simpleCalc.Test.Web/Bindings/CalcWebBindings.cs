@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
-using simpleCalc.Test.Drivers;
-using simpleCalc.Test.Pages;
+﻿using FluentAssertions;
+using simpleCalc.Test.Web.Pages;
 using TechTalk.SpecFlow;
 
-namespace simpleCalc.Test.Bindings
+namespace simpleCalc.Test.Web.Bindings
 {
-    [Binding, Scope(Tag = "Web")]
+    [Binding]
     class CalcViewWebBinding
     {
         private readonly CalcPage _calcPage;
@@ -20,7 +14,7 @@ namespace simpleCalc.Test.Bindings
             _calcPage = calcPage;
         }
 
-        [BeforeScenario("Web")]
+        [BeforeScenario()]
         public void BeforeScenario()
         {
             _calcPage.GoTo();

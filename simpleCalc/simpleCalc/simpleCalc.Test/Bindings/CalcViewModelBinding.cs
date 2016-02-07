@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 
 namespace simpleCalc.Test.Bindings
 {
-    [Binding, Scope(Tag = "ViewModel")]
+    [Binding]
     class CalcViewModelBinding
     {
         private readonly MainViewModelDriver _mainViewModelDriver;

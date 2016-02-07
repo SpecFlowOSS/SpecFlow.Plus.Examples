@@ -28,10 +28,8 @@
   </DeploymentTransformation>
   <Targets>
     <Target name="ViewModel">
-      <Filter>@ViewModel</Filter>
     </Target>
     <Target name="Web">
-      <Filter>@Web</Filter>
       
     </Target>
   </Targets>

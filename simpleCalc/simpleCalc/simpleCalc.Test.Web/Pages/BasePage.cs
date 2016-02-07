@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium;
-using simpleCalc.Test.Support;
+﻿using OpenQA.Selenium.Support.PageObjects;
+using simpleCalc.Test.Web.Support;
 
-namespace simpleCalc.Test.Pages
+namespace simpleCalc.Test.Web.Pages
 {
     public abstract class BasePage
     {

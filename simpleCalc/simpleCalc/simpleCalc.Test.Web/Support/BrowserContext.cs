@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
 
-namespace simpleCalc.Test.Support
+namespace simpleCalc.Test.Web.Support
 {
     public class BrowserContext
     {
