@@ -12,31 +12,22 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using contactlist.Entities;
 using contactlist.ViewModels;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace contactlist
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class NewContactPage : Page
     {
-        private MainViewModel _mainViewModel;
-
-        public MainPage()
+        public NewContactPage()
         {
             this.InitializeComponent();
-            _mainViewModel = new MainViewModel();
-            DataContext = _mainViewModel;
-            
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            _mainViewModel.Refresh();
+            DataContext = new ContactViewModel(new Contact());
         }
     }
 }
