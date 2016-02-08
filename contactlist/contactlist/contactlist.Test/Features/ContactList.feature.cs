@@ -1,0 +1,1 @@
+﻿#error (26:1): Feature file already contains a scenario with name 'Entries in the database are displayed'
