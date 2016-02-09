@@ -95,19 +95,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\Database.cs" />
-    <Compile Include="Entities\Contact.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NavigationImpl.cs" />
     <Compile Include="NewContactPage.xaml.cs">
       <DependentUpon>NewContactPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ContactViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -138,6 +134,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\contactlist.PCL\contactlist.PCL.csproj">
+      <Project>{07d2c628-013f-4869-8b55-c7bc7afd3eea}</Project>
+      <Name>contactlist.PCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

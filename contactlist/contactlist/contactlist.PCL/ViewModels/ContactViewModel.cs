@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using contactlist.Data;
-using contactlist.Entities;
+﻿using System.Windows.Input;
+using contactlist.PCL.Data;
+using contactlist.PCL.Entities;
 
-namespace contactlist.ViewModels
+namespace contactlist.PCL.ViewModels
 {
-    class ContactViewModel : ViewModel
+    public class ContactViewModel : ViewModel
     {
+        private readonly INavigation _navigation;
         private readonly Contact _contact;
 
-        public ContactViewModel(Contact contact)
+        public ContactViewModel(INavigation navigation, Contact contact)
         {
+            _navigation = navigation;
             _contact = contact;
             SaveCommand = new Command(OnSave);
         }
@@ -26,8 +21,7 @@ namespace contactlist.ViewModels
             var database = new Database();
             database.AddContact(_contact);
 
-            var frame = Window.Current.Content as Frame;
-            frame.GoBack();
+            _navigation.GoBack();
         }
 
         public ICommand SaveCommand { get; set; }

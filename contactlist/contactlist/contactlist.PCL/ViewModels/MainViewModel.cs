@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using contactlist.Data;
-using contactlist.Entities;
+using contactlist.PCL.Data;
+using contactlist.PCL.Entities;
 
-namespace contactlist.ViewModels
+namespace contactlist.PCL.ViewModels
 {
-    class MainViewModel : ViewModel
+    public class MainViewModel : ViewModel
     {
+        private readonly INavigation _navigation;
         public ObservableCollection<Contact> Contacts { get; set; }
         private readonly Database _database;
         private string _searchString;
 
-        public MainViewModel()
+        public MainViewModel(INavigation navigation)
         {
+            _navigation = navigation;
             _database = new Database();
             Contacts = new ObservableCollection<Contact>(_database.SearchContacts(""));
             AddCommand = new Command(ShowAddWindow);
@@ -27,8 +22,7 @@ namespace contactlist.ViewModels
 
         private void ShowAddWindow()
         {
-            var frame = Window.Current.Content as Frame;
-            frame.Navigate(typeof (NewContactPage));
+            _navigation.OpenNewContact();
         }
 
         public string SearchString
@@ -48,7 +42,10 @@ namespace contactlist.ViewModels
             Contacts.Clear();
 
             var result = _database.SearchContacts(value);
-            result.ForEach(Contacts.Add);
+            foreach (var contact in result)
+            {
+                Contacts.Add(contact);
+            }         
         }
 
         public ICommand AddCommand { get; set; }
