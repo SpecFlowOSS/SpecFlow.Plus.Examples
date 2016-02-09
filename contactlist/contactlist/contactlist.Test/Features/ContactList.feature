@@ -23,7 +23,7 @@ Scenario: Entries in the database are displayed
 
 #######################################################################################################################
 
-Scenario: Entries in the database are displayed
+Scenario: Multiple Entries in the database are displayed
 	Given the following contacts are stored:
 		| Firstname | Lastname     |
 		| Javier    | Knutson      |
