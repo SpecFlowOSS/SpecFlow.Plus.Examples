@@ -17,10 +17,10 @@ Scenario: Add contact with firstname
 Scenario: Add contact with lastname 
 	Given I enter following data in the "New Contact" dialog:
 		| Lastname |
-		| Javier   |
+		| Knutson  |
 
 	When I save the contact
 
 	Then the following contacts are stored:
 		| Lastname |
-		| Javier   |
+		| Knutson  |

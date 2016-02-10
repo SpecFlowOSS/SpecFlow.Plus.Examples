@@ -97,7 +97,7 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Lastname"});
             table3.AddRow(new string[] {
-                        "Javier"});
+                        "Knutson"});
 #line 18
  testRunner.Given("I enter following data in the \"New Contact\" dialog:", ((string)(null)), table3, "Given ");
 #line 22
@@ -106,7 +106,7 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Lastname"});
             table4.AddRow(new string[] {
-                        "Javier"});
+                        "Knutson"});
 #line 24
  testRunner.Then("the following contacts are stored:", ((string)(null)), table4, "Then ");
 #line hidden
