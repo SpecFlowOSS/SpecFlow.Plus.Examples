@@ -95,7 +95,7 @@ this.ScenarioSetup(scenarioInfo);
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Firstname"});
+                        "Lastname"});
             table3.AddRow(new string[] {
                         "Javier"});
 #line 18
@@ -104,7 +104,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I save the contact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Firstname"});
+                        "Lastname"});
             table4.AddRow(new string[] {
                         "Javier"});
 #line 24
