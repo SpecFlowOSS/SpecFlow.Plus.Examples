@@ -36,7 +36,7 @@ namespace simpleCalc.Test.Bindings
             _mainViewModelDriver.SetOperand2(value);
         }
 
-        [When(@"the calcuation is executed")]
+        [When(@"the calculation is executed")]
         public void WhenTheCalcuationIsExecuted()
         {
             _mainViewModelDriver.Calc();
