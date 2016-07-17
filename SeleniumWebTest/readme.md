@@ -11,7 +11,7 @@ In _configuration/appSettings/browser_ the used browser is configured. This valu
 ### Default.srProfile
 
 #### Targets
-3 Targets (one for every browser) are defined here. They have a filter on the tag _Browser\_**{BrowserName}**_, so only scenarios with the tag is executed in this target.
+3 Targets (one for every browser) are defined here. They have a filter on the tag _Browser_\_**__{BrowserName}__**, so only scenarios with the tag is executed in this target.
 
 #### DeploymentSteps
 2 deployment steps are configured
@@ -26,7 +26,7 @@ To get access to the Selenium Web Driver, use the _Current_ property on it. Use 
 
 ### CalculatorFeature.feature
 Here are the scenarios defined.  
-To get a scenario executed for a browser, add a tag _Browser\_**{BrowserName}**_ to the scenario/scenario outline/feature.  
+To get a scenario executed for a browser, add a tag _Browser_\_**__{BrowserName}__** to the scenario/scenario outline/feature.  
 
 **Example for a scenario for all 3 browsers:**
 ```
