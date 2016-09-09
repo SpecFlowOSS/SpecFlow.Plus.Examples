@@ -93,6 +93,7 @@
       <DependentUpon>CalculatorFeature.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\Browser.cs" />
+    <Compile Include="Support\Screenshots.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
