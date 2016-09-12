@@ -24,10 +24,10 @@ namespace TestApplication.UiTests.Support
             if (takesScreenshot != null)
             {
                 var screenshot = takesScreenshot.GetScreenshot();
-                var tempFileName = Path.GetFileNameWithoutExtension(Path.GetTempFileName()) + ".jpg";
+                var tempFileName = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileNameWithoutExtension(Path.GetTempFileName())) + ".jpg";
                 screenshot.SaveAsFile(tempFileName, ImageFormat.Jpeg);
 
-                Console.WriteLine(tempFileName);
+                Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
             }
         }
     }

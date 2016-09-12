@@ -6,6 +6,10 @@
   <TestAssemblyPaths>
     <TestAssemblyPath>TestApplication.UiTests.dll</TestAssemblyPath>
   </TestAssemblyPaths>
+  <Report>
+    <Template name="Report\ReportTemplate.cshtml"/>
+  </Report>
+  
   <DeploymentTransformation>    
     <Steps>
       <IISExpress webAppFolder="..\..\..\TestApplication" port="58909"/>

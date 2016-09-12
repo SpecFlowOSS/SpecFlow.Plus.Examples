@@ -45,6 +45,9 @@
       <HintPath>..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\SpecRun.Runner.1.5.2\tools\RazorEngine.dll</HintPath>
+    </Reference>
     <Reference Include="SpecRun.SpecFlowPlugin, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecRun.SpecFlow.1.5.2\lib\net45\SpecRun.SpecFlowPlugin.dll</HintPath>
       <Private>True</Private>
@@ -52,6 +55,10 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SpecRun.Runner.1.5.2\tools\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
@@ -61,6 +68,12 @@
     <Reference Include="TechTalk.SpecRun, Version=1.5.2.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecRun.SpecFlow.1.5.2\lib\net45\TechTalk.SpecRun.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun.Framework">
+      <HintPath>..\packages\SpecRun.Runner.1.5.2\tools\TechTalk.SpecRun.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun.Framework.Interfaces">
+      <HintPath>..\packages\SpecRun.Runner.1.5.2\tools\TechTalk.SpecRun.Framework.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.0.0-beta3\lib\net40\WebDriver.dll</HintPath>
@@ -107,6 +120,9 @@
     <None Include="Features\CalculatorFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Report\ReportTemplate.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
