@@ -87,43 +87,346 @@ this.ScenarioSetup(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "Browser_IE",
-                    "Browser_Chrome"};
+                    "Browser_Chrome",
+                    "Browser_Firefox"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Two Numbers", @__tags);
-#line 15
-this.ScenarioSetup(scenarioInfo);
 #line 16
- testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 17
- testRunner.And(string.Format("I have entered {0} into summandOne calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
- testRunner.And(string.Format("I have entered {0} into summandTwo calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have entered {0} into summandOne calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I have entered {0} into summandTwo calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
+ testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
  testRunner.Then(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 50", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 0", new string[] {
                 "Browser_IE",
-                "Browser_Chrome"}, SourceLine=23)]
-        public virtual void AddTwoNumbers_50()
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant0()
         {
             this.AddTwoNumbers("50", "70", "120", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 1", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 1", new string[] {
                 "Browser_IE",
-                "Browser_Chrome"}, SourceLine=23)]
-        public virtual void AddTwoNumbers_1()
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant1()
         {
             this.AddTwoNumbers("1", "10", "11", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 2", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant2()
+        {
+            this.AddTwoNumbers("43", "12", "55", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 3", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant3()
+        {
+            this.AddTwoNumbers("19", "73", "92", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 4", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant4()
+        {
+            this.AddTwoNumbers("26", "12", "38", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 5", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant5()
+        {
+            this.AddTwoNumbers("49", "15", "64", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 6", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant6()
+        {
+            this.AddTwoNumbers("11", "26", "37", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 7", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant7()
+        {
+            this.AddTwoNumbers("81", "93", "174", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 8", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant8()
+        {
+            this.AddTwoNumbers("69", "90", "159", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 9", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant9()
+        {
+            this.AddTwoNumbers("91", "52", "143", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 10", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant10()
+        {
+            this.AddTwoNumbers("38", "52", "90", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 11", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant11()
+        {
+            this.AddTwoNumbers("73", "6", "79", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 12", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant12()
+        {
+            this.AddTwoNumbers("64", "40", "104", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 13", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant13()
+        {
+            this.AddTwoNumbers("48", "8", "56", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 14", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant14()
+        {
+            this.AddTwoNumbers("93", "25", "118", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 15", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant15()
+        {
+            this.AddTwoNumbers("83", "40", "123", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 16", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant16()
+        {
+            this.AddTwoNumbers("56", "1", "57", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 17", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant17()
+        {
+            this.AddTwoNumbers("70", "88", "158", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 18", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant18()
+        {
+            this.AddTwoNumbers("67", "78", "145", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 19", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant19()
+        {
+            this.AddTwoNumbers("53", "94", "147", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 20", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant20()
+        {
+            this.AddTwoNumbers("49", "95", "144", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 21", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant21()
+        {
+            this.AddTwoNumbers("88", "22", "110", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 22", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant22()
+        {
+            this.AddTwoNumbers("66", "11", "77", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 23", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant23()
+        {
+            this.AddTwoNumbers("98", "13", "111", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 24", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant24()
+        {
+            this.AddTwoNumbers("47", "67", "114", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 25", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant25()
+        {
+            this.AddTwoNumbers("99", "87", "186", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 26", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant26()
+        {
+            this.AddTwoNumbers("91", "3", "94", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 27", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant27()
+        {
+            this.AddTwoNumbers("85", "100", "185", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 28", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant28()
+        {
+            this.AddTwoNumbers("75", "94", "169", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 29", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant29()
+        {
+            this.AddTwoNumbers("37", "74", "111", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 30", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant30()
+        {
+            this.AddTwoNumbers("35", "33", "68", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, Variant 31", new string[] {
+                "Browser_IE",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=24)]
+        public virtual void AddTwoNumbers_Variant31()
+        {
+            this.AddTwoNumbers("32", "59", "91", ((string[])(null)));
 #line hidden
         }
         

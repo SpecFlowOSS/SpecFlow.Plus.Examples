@@ -21,7 +21,7 @@ namespace TestApplication.UiTests.Steps
             var driver = _webDriver.Current;
             driver.Manage().Window.Maximize();
             string baseUrl = ConfigurationManager.AppSettings["seleniumBaseUrl"];
-            driver.Navigate().GoToUrl(string.Format("{0}{1}", baseUrl, url));
+            driver.Navigate().GoToUrl($"{baseUrl}{url}");
         }
 
         [Then(@"browser title is (.*)")]
