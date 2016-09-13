@@ -1,39 +1,31 @@
-# Selenium Web Test Example
+# Selenium Gird Web Test Example
 
 This is a example how to use SpecFlow and SpecFlow+Runner to run Selenium Web Tests for different Browsers.  
-The example is based on https://github.com/baseclass/Contrib.SpecFlow.Selenium.NUnit
+The example is based on https://github.com/techtalk/SpecFlow.Plus.Examples/tree/master/SeleniumWebTest
+
+## Prerequisites
+To run this example, you need a running Selenium Grid. For installing, configuring and running have a look at: https://github.com/SeleniumHQ/selenium/wiki/Grid2
+
+##Info about Parallelisation and Browser
+###Chrome
+everything works
+
+###Firefox
+should work
+
+###Internet Explorer
+On the same pc, you will not get any gain, because as it looks like, IEDriverServer does not handle multi instances of IE very performant. (Status from 2016-09-13)
+Execute the tests on multiple nodes.
+
+
 
 ## Important parts
 
 ### app.config
-In _configuration/appSettings/browser_ the used browser is configured. This value is changed by a ConfigFileTransformation in the **Default.srProfile**
-
-### Default.srProfile
-
-#### Targets
-3 Targets (one for every browser) are defined here. They have a filter on the tag _Browser\_**{BrowserName}**_, so only scenarios with the tag is executed in this target.
-
-#### DeploymentSteps
-2 deployment steps are configured
-1. IISExpress - this starts a IIS Express instance, so you do not have to check it manually that it is running
-2. ConfigFileTransformation - this sets the _configuration/appSettings/browser_ to the target name
-
+In _configuration/appSettings/seleniumHub_ the used selenium grid is configured. 
 
 ### WebDriver.cs
 This driver provides you access to the appropriate Selenium WebDriver. It uses the _configuration/appSettings/browser_ value for this.
+As we are using Selenium Grid, a RemoteWebDriver with appropriate DesiredCapabilities is needed. This driver is configures with the _configuration/appSettings/seleniumHub_ Uri for the grid.
 To get access to the Selenium Web Driver, use the _Current_ property on it. Use [Context Injection](http://www.specflow.org/documentation/Context-Injection/) to get the instance.
 
-
-### CalculatorFeature.feature
-Here are the scenarios defined.  
-To get a scenario executed for a browser, add a tag _Browser\_**{BrowserName}**_ to the scenario/scenario outline/feature.  
-
-**Example for a scenario for all 3 browsers:**
-```
-@Browser_Chrome
-@Browser_IE
-@Browser_Firefox
-Scenario: Basepage is Calculator
-	Given I navigated to /
-	Then browser title is Calculator
-```
