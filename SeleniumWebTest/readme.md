@@ -3,7 +3,7 @@
 This is a example how to use SpecFlow and SpecFlow+Runner to run Selenium Web Tests for different Browsers.  
 The example is based on https://github.com/baseclass/Contrib.SpecFlow.Selenium.NUnit
 
-This example also takes a screenshot after each step and embeds the screnshot in the final report. Refer to the documentation [here] (www.specflow.org/plus/documentation/Tutorial:-Customising-Reports) for an explanation of how the screenshot's path is passed to the report.
+This example also takes a screenshot after each step and embeds the screnshot in the final report. Refer to the documentation [here] (http://www.specflow.org/plus/documentation/Tutorial:-Customising-Reports) for an explanation of how the screenshot's path is passed to the report.
 
 ## Important parts
 
