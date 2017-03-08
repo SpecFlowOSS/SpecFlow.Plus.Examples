@@ -43,7 +43,7 @@ namespace CalculatorUnitTests.Steps
         [Given(@"I navigated to Standard Calculator")]
         public void GivenINavigatedToStandard()
         {
-            _calculator.NavigateTo(ConfigurationManager.AppSettings["standardCalculator"]);
+            _calculator.NavigateToStandard();
         }
         
         [Given(@"I have entered (.*) into calculator")]
