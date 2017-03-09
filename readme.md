@@ -1,5 +1,6 @@
 This repository contains a number of sample projects for SpecFlow+:
 
+* CustomDeploymentSteps: A sample project based on the WindowsAppDriver project which shows how to use Custom Deployment Steps to set up the testing environment
 * ExcelExample: A sample project showing all possible usages of SpecFlow+ Excel
 * Getting_Started: A very simple project based on the [Getting Started](http://www.specflow.org/getting-started/) guide. Includes a single SpecFlow+ Runner test and a very basic calculator application that is tested.
 * Getting_Started_Excel: Similar to the Getting Started for SpecFlow+ Runner, this project includes a basic calculator using features defined in Excel.
