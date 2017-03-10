@@ -64,12 +64,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\CalculatorAdd.feature.xlsx.cs" />
     <Compile Include="Steps\CalculatorDivideFeatureSteps.cs" />
-    <Compile Include="Features\CalculatorAdd.feature.xlsx.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CalculatorAdd.feature.xlsx.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\CalculatorDivide.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,10 +76,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CalculatorMultiply.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\CalculatorSubstract.feature.cs">
+    <Compile Include="Features\CalculatorSubtract.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CalculatorSubstract.feature</DependentUpon>
+      <DependentUpon>CalculatorSubtract.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CalculatorAddFeatureSteps.cs" />
@@ -97,10 +93,7 @@
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\CalculatorAdd.feature.xlsx.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CalculatorAdd.feature.xlsx.feature.cs</LastGenOutput>
-    </None>
+    <None Include="Features\CalculatorAdd.feature.xlsx.feature" />
     <None Include="Features\CalculatorDivide.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorDivide.feature.cs</LastGenOutput>
@@ -111,9 +104,9 @@
     </None>
     <None Include="Features\MultiplyTwoNumbers.part.examples.xlsx" />
     <None Include="Features\SubtractTwoNumbers.examples.xlsx" />
-    <None Include="Features\CalculatorSubstract.feature">
+    <None Include="Features\CalculatorSubtract.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CalculatorSubstract.feature.cs</LastGenOutput>
+      <LastGenOutput>CalculatorSubtract.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

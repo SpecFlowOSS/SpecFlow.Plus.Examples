@@ -1,9 +1,9 @@
 # Excel Example
 This example demonstrates the three usecases of using SpecFlow+ Excel.
-* Defining full Features in Excel (Add Feature)
-* Defining all examples in Excel (Subtract Feature)
-* Defining only a part of the used examples in Excel (Multiply Feature)
+* Defining full Features in Excel (CalculatorAdd.feature)
+* Defining all examples in Excel (CalculatorSubtract.feature)
+* Defining only a part of the used examples in Excel (CalculatorMultiply.feature)
 
-Ofcourse it is als o possible to use non Excel Features alongside Excel Features (Divide Feature)
+Of course it is als o possible to use non Excel Features alongside Excel Features (CalculatorDivide.feature)
 
  

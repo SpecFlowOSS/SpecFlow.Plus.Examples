@@ -18,13 +18,13 @@ namespace ExcelExample.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Calculator Subtract Feature", Description="\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the diffe" +
-        "rence of two numbers", SourceFile="Features\\CalculatorSubstract.feature", SourceLine=0)]
+        "rence of two numbers", SourceFile="Features\\CalculatorSubtract.feature", SourceLine=0)]
     public partial class CalculatorSubtractFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CalculatorSubstract.feature"
+#line 1 "CalculatorSubtract.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
