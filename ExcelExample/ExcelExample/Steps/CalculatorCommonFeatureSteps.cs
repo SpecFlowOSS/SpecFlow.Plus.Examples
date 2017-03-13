@@ -26,6 +26,30 @@ namespace ExcelExample.Steps
             _calculator.SecondNumber = secondNumber;
         }
 
+        [When(@"I press add")]
+        public void WhenIPressAdd()
+        {
+            _calculator.Add();
+        }
+
+        [When(@"I press substract")]
+        public void WhenIPressSubstract()
+        {
+            _calculator.Subtract();
+        }
+
+        [When(@"I press multiply")]
+        public void WhenIPressMultiply()
+        {
+            _calculator.Multiply();
+        }
+
+        [When(@"I press divide")]
+        public void WhenIPressDivide()
+        {
+            _calculator.Divide();
+        }
+
         [Then(@"The result should be (.*) on the screen")]
         public void ThenTheResltShouldBeOnTheScreen(int expectedResult)
         {
