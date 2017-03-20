@@ -12,3 +12,8 @@ the path to WinAppDriver.exe must bepassed as an argument to the Custom Deployme
 ## Related Documentation
 
 Documentation for (Custom) Deployment Steps can be found [here](http://specflow.org/plus/documentation/SpecFlowPlus-Runner-Profiles/#DeploymentTransformation)
+
+## Additional Notes
+Because this project is designed to work on all language versions of Windows, the `Assert` statements use `String.Contains()` to test the result. This is to esnure that the tests will pass irrespective of the language used by the Windows calculator, as the strings tested by the `Assert` also contain words in this language.
+
+The flipside of this is that the tests will pass under certain circumstances, even if the result is incorrect (e.g. a result of "**120**000" will be treated the same as a result of "120" for the first test (50+70=120), i.e. results both will make the test pass).
