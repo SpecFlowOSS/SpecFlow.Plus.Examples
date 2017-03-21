@@ -63,15 +63,15 @@ namespace ExcelExample.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void DivideTwoNumbers(string divident, string divisor, string result, string[] exampleTags)
+        public virtual void DivideTwoNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", exampleTags);
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given(string.Format("I have entered {0} into the calculator", divident), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And(string.Format("I have also entered {0} into the calculator", divisor), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
  testRunner.When("I press divide", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -80,28 +80,28 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 70", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 70", SourceLine=14)]
         public virtual void DivideTwoNumbers_70()
         {
             this.DivideTwoNumbers("70", "50", "1", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 1", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 1", SourceLine=14)]
         public virtual void DivideTwoNumbers_1()
         {
             this.DivideTwoNumbers("1", "2", "0", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, -10", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, -10", SourceLine=14)]
         public virtual void DivideTwoNumbers_10()
         {
             this.DivideTwoNumbers("-10", "10", "-1", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 42", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 42", SourceLine=14)]
         public virtual void DivideTwoNumbers_42()
         {
             this.DivideTwoNumbers("42", "13", "3", ((string[])(null)));

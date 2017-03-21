@@ -63,15 +63,15 @@ namespace ExcelExample.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SubtractTwoNumbers(string minuend, string subtrahend, string result, string[] exampleTags)
+        public virtual void SubtractTwoNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtract two numbers", exampleTags);
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given(string.Format("I have entered {0} into the calculator", minuend), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And(string.Format("I have also entered {0} into the calculator", subtrahend), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
  testRunner.When("I press substract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10

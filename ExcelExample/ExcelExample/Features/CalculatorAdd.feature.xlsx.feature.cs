@@ -61,15 +61,15 @@ namespace ExcelExample.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void AddTwoPositiveNumbers(string summandOne, string summandTwo, string result, string[] exampleTags)
+        public virtual void AddTwoPositiveNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two positive numbers", exampleTags);
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.Given(string.Format("I have entered {0} into the calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
- testRunner.And(string.Format("I have also entered {0} into the calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
  testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
@@ -106,15 +106,15 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
         }
         
-        public virtual void AddTwoNegativeNumbers(string summandOne, string summandTwo, string result, string[] exampleTags)
+        public virtual void AddTwoNegativeNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two negative numbers", exampleTags);
 #line 28
 this.ScenarioSetup(scenarioInfo);
 #line 29
- testRunner.Given(string.Format("I have entered {0} into the calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.And(string.Format("I have also entered {0} into the calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
  testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32

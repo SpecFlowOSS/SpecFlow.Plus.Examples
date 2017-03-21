@@ -63,15 +63,15 @@ namespace ExcelExample.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void MultiplyTwoNumbers(string factorOne, string factorTwo, string result, string[] exampleTags)
+        public virtual void MultiplyTwoNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply two numbers", exampleTags);
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given(string.Format("I have entered {0} into the calculator", factorOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And(string.Format("I have also entered {0} into the calculator", factorTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
  testRunner.When("I press multiply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -81,7 +81,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, -10", new string[] {
-                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=14)]
+                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=16)]
         public virtual void MultiplyTwoNumbers_10()
         {
             this.MultiplyTwoNumbers("-10", "10", "-100", new string[] {
@@ -90,7 +90,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 42", new string[] {
-                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=14)]
+                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=16)]
         public virtual void MultiplyTwoNumbers_42()
         {
             this.MultiplyTwoNumbers("42", "13", "546", new string[] {
@@ -99,7 +99,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 70", new string[] {
-                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=14)]
+                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=16)]
         public virtual void MultiplyTwoNumbers_70()
         {
             this.MultiplyTwoNumbers("70", "50", "3500", new string[] {
@@ -108,7 +108,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 1", new string[] {
-                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=14)]
+                "source:MultiplyTwoNumbers.part.examples.xlsx"}, SourceLine=16)]
         public virtual void MultiplyTwoNumbers_1()
         {
             this.MultiplyTwoNumbers("1", "2", "2", new string[] {
