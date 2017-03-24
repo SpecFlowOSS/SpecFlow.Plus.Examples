@@ -1,7 +1,4 @@
-﻿using System.Linq.Expressions;
-using System.Security.AccessControl;
-
-namespace TestCalculator
+﻿namespace TestCalculator
 {
     public class MemoryCalculator : ICalculator
     {
@@ -12,8 +9,7 @@ namespace TestCalculator
         public void EnterNumber(int number)
         {
             _numbers[_index] = number;
-            _index++;
-            _index %= 2;
+            _index = (_index + 1) % 2;
         }
 
         public void Add()

@@ -5,16 +5,16 @@ Process Isolation.
 
 ## Config
 
-The three provided .runsetting files can be used to start the test in each above
+The three provided .runsetting files can be used to start the tests in each above
 mentioned mode. In Visual Studio select "Test>Test Settings>Select Test Settings File"
-to choose the setting for the project-
+to choose the run configuration for the tests.
 
 ## SharedAppDomain
 
 In SharedAppDomain mode the tests runs in seperate threads in one AppDomain.
-That means that static data is shared between these threads and there is no protection
-between the threads. On the other hand it is the fastest execution mode as there is
-no need to spawn seperate AppDomains or even processes. Also [BeforeTestRun] and
+That means that static data is shared between them and there is no protection between these threads.
+On the other hand it is the fastest execution mode as there is
+no need to spawn seperate AppDomains or processes. Additionally [BeforeTestRun] and
 [AfterTestRun] is only executed once.
 
 ## AppDomain (Default)
@@ -30,6 +30,6 @@ between them and it offers the highest form of protection. On the other hand it 
 also the slowest mode of execution.
 
 ## Further information
-[SpecFlow Documentation: Parallel Execution](http://specflow.org/documentation/Parallel-Execution/)
+[SpecFlow Documentation: Parallel Execution](https://specflow.org/documentation/Parallel-Execution/)
 
-[Profile Configuration](http://specflow.org/plus/documentation/SpecFlowPlus-Runner-Profiles/#Environment)
+[Profile Configuration](https://specflow.org/plus/documentation/SpecFlowPlus-Runner-Profiles/#Environment)

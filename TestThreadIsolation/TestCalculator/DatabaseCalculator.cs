@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 
 namespace TestCalculator
 {
@@ -42,13 +36,13 @@ namespace TestCalculator
         {
             using (var con = new SQLiteConnection(ConnectionString).OpenAndReturn())
             {
-                var command1 = con.CreateCommand();
-                command1.CommandText = "DROP TABLE IF EXISTS calc";
-                command1.ExecuteNonQuery();
-
                 var command2 = con.CreateCommand();
-                command2.CommandText = "CREATE TABLE calc ( numbers INTEGER);";
+                command2.CommandText = "CREATE TABLE IF NOT EXISTS calc ( numbers INTEGER);";
                 command2.ExecuteNonQuery();
+
+                var command1 = con.CreateCommand();
+                command1.CommandText = "DELETE FROM calc";
+                command1.ExecuteNonQuery();
             }
         }
     }

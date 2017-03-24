@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 using TestCalculator;
@@ -32,9 +30,9 @@ namespace TestThreadIsolation
         }
 
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        public void GivenIHaveEnteredIntoTheCalculator(int number)
         {
-            _calculator.EnterNumber(p0);
+            _calculator.EnterNumber(number);
         }
         
         [When(@"I press add")]
@@ -44,9 +42,9 @@ namespace TestThreadIsolation
         }
         
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
-            Assert.AreEqual(p0,_calculator.Result);
+            Assert.AreEqual(expectedResult,_calculator.Result);
             Console.WriteLine(_calculator.GetType());
         }
     }
