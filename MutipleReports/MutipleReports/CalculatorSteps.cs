@@ -1,5 +1,4 @@
-﻿using System;
-using Example;
+﻿using Example;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
