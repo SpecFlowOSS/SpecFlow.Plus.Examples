@@ -3,7 +3,7 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
-@Add @Simple
+@Simple @Feature_1 @Stable
 Scenario Outline: Add Two Numbers
 	Given I have entered <SummandOne> into the calculator
 	And I have also entered <SummandTwo> into the calculator

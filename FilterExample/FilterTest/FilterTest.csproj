@@ -87,13 +87,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Complex.srprofile">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="Profiles\NotStable.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="Complex.runsettings" />
-    <None Include="Simple.runsettings" />
-    <None Include="Simple.srprofile">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="Profiles\Sprint2.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Profiles\Sprint1.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Profiles\Complex.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Runsettings\NotStable.runsettings">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Runsettings\Sprint1.runsettings">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Runsettings\Sprint2.runsettings">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Runsettings\Complex.runsettings">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Runsettings\Simple.runsettings" />
+    <None Include="Profiles\Simple.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

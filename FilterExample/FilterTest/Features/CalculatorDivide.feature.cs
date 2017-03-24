@@ -66,8 +66,9 @@ namespace FilterTest.Features
         public virtual void DivideTwoNumbers(string divident, string divisor, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Divide",
-                    "Complex"};
+                    "Complex",
+                    "Feature_2",
+                    "Stable"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -88,8 +89,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 70", new string[] {
-                "Divide",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_2",
+                "Stable"}, SourceLine=14)]
         public virtual void DivideTwoNumbers_70()
         {
             this.DivideTwoNumbers("70", "50", "1", ((string[])(null)));
@@ -97,8 +99,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 1", new string[] {
-                "Divide",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_2",
+                "Stable"}, SourceLine=14)]
         public virtual void DivideTwoNumbers_1()
         {
             this.DivideTwoNumbers("1", "2", "0", ((string[])(null)));
@@ -106,8 +109,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, -10", new string[] {
-                "Divide",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_2",
+                "Stable"}, SourceLine=14)]
         public virtual void DivideTwoNumbers_10()
         {
             this.DivideTwoNumbers("-10", "10", "-1", ((string[])(null)));
@@ -115,8 +119,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 42", new string[] {
-                "Divide",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_2",
+                "Stable"}, SourceLine=14)]
         public virtual void DivideTwoNumbers_42()
         {
             this.DivideTwoNumbers("42", "13", "3", ((string[])(null)));

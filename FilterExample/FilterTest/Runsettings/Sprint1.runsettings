@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <RunSettings>
   <SpecRun>
-    <Profile>Simple.srprofile</Profile>
+    <Profile>Profiles/Sprint1.srprofile</Profile>
   </SpecRun>
 </RunSettings>  

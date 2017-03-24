@@ -3,7 +3,7 @@
 	As a math idiot
 	I want to be told the product of two numbers
 
-@Multiply @Complex
+@Multiply @Complex @Feature_3 @Flickering
 Scenario Outline: Multiply two numbers
 	Given I have entered <FactorOne> into the calculator
 	And I have also entered <FactorTwo> into the calculator

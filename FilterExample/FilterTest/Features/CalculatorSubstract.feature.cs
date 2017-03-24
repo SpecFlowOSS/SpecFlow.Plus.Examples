@@ -67,7 +67,9 @@ namespace FilterTest.Features
         {
             string[] @__tags = new string[] {
                     "Substract",
-                    "Simple"};
+                    "Simple",
+                    "Feature_4",
+                    "Failing"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -89,7 +91,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Subtract Two Numbers, 70", new string[] {
                 "Substract",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_4",
+                "Failing"}, SourceLine=14)]
         public virtual void SubtractTwoNumbers_70()
         {
             this.SubtractTwoNumbers("70", "50", "20", ((string[])(null)));
@@ -98,7 +102,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Subtract Two Numbers, 1", new string[] {
                 "Substract",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_4",
+                "Failing"}, SourceLine=14)]
         public virtual void SubtractTwoNumbers_1()
         {
             this.SubtractTwoNumbers("1", "2", "-1", ((string[])(null)));
@@ -107,7 +113,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Subtract Two Numbers, -10", new string[] {
                 "Substract",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_4",
+                "Failing"}, SourceLine=14)]
         public virtual void SubtractTwoNumbers_10()
         {
             this.SubtractTwoNumbers("-10", "10", "-20", ((string[])(null)));
@@ -116,7 +124,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Subtract Two Numbers, 42", new string[] {
                 "Substract",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_4",
+                "Failing"}, SourceLine=14)]
         public virtual void SubtractTwoNumbers_42()
         {
             this.SubtractTwoNumbers("42", "13", "29", ((string[])(null)));

@@ -3,7 +3,7 @@
 	As a math idiot
 	I want to be told the difference of two numbers
 
-@Substract @Simple
+@Substract @Simple @Feature_4 @Failing
 Scenario Outline: Subtract Two Numbers
 	Given I have entered <Minuend> into the calculator
 	And I have also entered <Subtrahend> into the calculator

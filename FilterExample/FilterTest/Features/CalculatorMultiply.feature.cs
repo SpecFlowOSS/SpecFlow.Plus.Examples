@@ -67,7 +67,9 @@ namespace FilterTest.Features
         {
             string[] @__tags = new string[] {
                     "Multiply",
-                    "Complex"};
+                    "Complex",
+                    "Feature_3",
+                    "Flickering"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -89,7 +91,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 70", new string[] {
                 "Multiply",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_3",
+                "Flickering"}, SourceLine=14)]
         public virtual void MultiplyTwoNumbers_70()
         {
             this.MultiplyTwoNumbers("70", "50", "3500", ((string[])(null)));
@@ -98,7 +102,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 1", new string[] {
                 "Multiply",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_3",
+                "Flickering"}, SourceLine=14)]
         public virtual void MultiplyTwoNumbers_1()
         {
             this.MultiplyTwoNumbers("1", "2", "2", ((string[])(null)));
@@ -107,7 +113,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, -10", new string[] {
                 "Multiply",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_3",
+                "Flickering"}, SourceLine=14)]
         public virtual void MultiplyTwoNumbers_10()
         {
             this.MultiplyTwoNumbers("-10", "10", "-100", ((string[])(null)));
@@ -116,7 +124,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 42", new string[] {
                 "Multiply",
-                "Complex"}, SourceLine=14)]
+                "Complex",
+                "Feature_3",
+                "Flickering"}, SourceLine=14)]
         public virtual void MultiplyTwoNumbers_42()
         {
             this.MultiplyTwoNumbers("42", "13", "546", ((string[])(null)));

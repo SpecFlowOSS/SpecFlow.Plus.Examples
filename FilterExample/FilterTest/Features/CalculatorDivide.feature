@@ -3,7 +3,7 @@
 	As a math idiot
 	I want to be told the quotient of two numbers
 
-@Divide @Complex
+@Complex @Feature_2 @Stable
 Scenario Outline: Divide two numbers
 	Given I have entered <Divident> into the calculator
 	And I have also entered <Divisor> into the calculator

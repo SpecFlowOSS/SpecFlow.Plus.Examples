@@ -66,8 +66,9 @@ namespace FilterTest.Features
         public virtual void AddTwoNumbers(string summandOne, string summandTwo, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Add",
-                    "Simple"};
+                    "Simple",
+                    "Feature_1",
+                    "Stable"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -88,8 +89,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 70", new string[] {
-                "Add",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_1",
+                "Stable"}, SourceLine=14)]
         public virtual void AddTwoNumbers_70()
         {
             this.AddTwoNumbers("70", "50", "120", ((string[])(null)));
@@ -97,8 +99,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 1", new string[] {
-                "Add",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_1",
+                "Stable"}, SourceLine=14)]
         public virtual void AddTwoNumbers_1()
         {
             this.AddTwoNumbers("1", "2", "3", ((string[])(null)));
@@ -106,8 +109,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 10", new string[] {
-                "Add",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_1",
+                "Stable"}, SourceLine=14)]
         public virtual void AddTwoNumbers_10()
         {
             this.AddTwoNumbers("10", "10", "20", ((string[])(null)));
@@ -115,8 +119,9 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 42", new string[] {
-                "Add",
-                "Simple"}, SourceLine=14)]
+                "Simple",
+                "Feature_1",
+                "Stable"}, SourceLine=14)]
         public virtual void AddTwoNumbers_42()
         {
             this.AddTwoNumbers("42", "13", "55", ((string[])(null)));
