@@ -1,1 +1,5 @@
-This solution is based on the [Getting Started](http://www.specflow.org/getting-started/) guide for SpecFlow+ Runner.
+# AppVeyor Example
+
+This examples shows how to configure AppVeyor to use the SpecFlow+Runner
+
+The appveyor.yml file is located here: https://github.com/techtalk/SpecFlow.Plus.Examples/blob/master/appveyor.yml
