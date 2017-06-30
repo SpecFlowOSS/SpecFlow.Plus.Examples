@@ -1,0 +1,4 @@
+version: 1.0.{build}
+build:
+  project: AppVeyor_Support\MyProject.Specs.sln
+  verbosity: minimal
