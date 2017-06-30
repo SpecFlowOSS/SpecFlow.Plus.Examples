@@ -1,38 +1,49 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Example;
 
 namespace MyProject.Specs
 {
     [Binding]
-    public class CalculatorSteps
+    public class AppVeyorSteps
     {
-        private int result { get; set; }
-        private Calculator calculator = new Calculator();
-
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int number)
+        [Given(@"I have a passing SpecFlow project")]
+        public void GivenIHaveAPassingSpecFlowProject()
         {
-            calculator.FirstNumber = number;
         }
 
-        [Given(@"I have also entered (.*) into the calculator")]
-        public void GivenIHaveAlsoEnteredIntoTheCalculator(int number)
+        [When(@"an AppVeyor build is executed")]
+        public void WhenAnAppVeyorBuildIsExecuted()
         {
-            calculator.SecondNumber = number;
         }
 
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+        [Then(@"the tests are run and everything passed")]
+        public void ThenTheTestsAreRunAndEverythingPassed()
         {
-            result = calculator.Add();
         }
 
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
+        [Given(@"I have a failing SpecFlow project")]
+        public void GivenIHaveAFailingSpecFlowProject()
         {
-            Assert.AreEqual(expectedResult, result);
+            throw new Exception("Failing SpecFlow project");
         }
+
+        [Then(@"the tests are run and it failed")]
+        public void ThenTheTestsAreRunAndItFailed()
+        {
+        }
+
+        [Given(@"I have a SpecFlow project which has not all step bound")]
+        public void GivenIHaveASpecFlowProjectWhichHasNotAllStepBound()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the tests are run and it is inconclusive")]
+        public void ThenTheTestsAreRunAndItIsInconclusive()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }

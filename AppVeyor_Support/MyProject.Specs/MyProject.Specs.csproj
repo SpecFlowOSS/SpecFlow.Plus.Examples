@@ -62,19 +62,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Calculator.feature.cs">
+    <Compile Include="AppVeyor.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Calculator.feature</DependentUpon>
+      <DependentUpon>AppVeyor.feature</DependentUpon>
     </Compile>
     <Compile Include="CalculatorSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Calculator.feature">
+    <None Include="AppVeyor.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Calculator.feature.cs</LastGenOutput>
+      <LastGenOutput>AppVeyor.feature.cs</LastGenOutput>
     </None>
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -87,12 +87,6 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Example\Example.csproj">
-      <Project>{3381c5ea-20cc-4b8e-98d5-e3cf7c587845}</Project>
-      <Name>Example</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
