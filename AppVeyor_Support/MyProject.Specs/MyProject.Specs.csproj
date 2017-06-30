@@ -67,7 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppVeyor.feature</DependentUpon>
     </Compile>
-    <Compile Include="CalculatorSteps.cs" />
+    <Compile Include="AppVeyorSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
