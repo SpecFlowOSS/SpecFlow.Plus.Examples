@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(USERPROFILE)\.nuget\packages\specflow\2.2.1\tools\TechTalk.SpecFlow.targets" />
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SpecFlow" Version="2.2.1" />
+    <PackageReference Include="SpecRun.Runner" Version="1.6.3" />
+    <PackageReference Include="SpecRun.SpecFlow.2-2-0" Version="1.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Default.srProfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+  
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <CallTarget Targets="GenerateSpecFlowCodeBehinds" />
+  </Target>
+
+  <Target Name="GenerateSpecFlowCodeBehinds">
+    <ItemGroup>
+      <FilesToDelete Include="Features\**\*.cs" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+
+    <CallTarget Targets="UpdateFeatureFilesInProject"></CallTarget>
+  </Target>
+ 
+</Project>
