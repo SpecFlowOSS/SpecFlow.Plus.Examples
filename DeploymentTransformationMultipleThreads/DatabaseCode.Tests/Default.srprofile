@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
     <Settings projectName="DatabaseCode.Tests" projectId="{02ab3b21-6c7e-4235-be3a-00d11461eddc}" />
-    <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential" />
-    <!-- For collecting by a SpecRun server update and enable the following element. For using the 
-      collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
-    <Server serverUrl="http://specrunserver:6365" publishResults="true" />
-  -->
+    <Execution stopAfterFailures="0" testThreadCount="4" retryFor="None" testSchedulingMode="Random" />
+    <Environment apartmentState="STA" />
     <TestAssemblyPaths>
         <TestAssemblyPath>DatabaseCode.Tests.dll</TestAssemblyPath>
     </TestAssemblyPaths>
     <DeploymentTransformation>
         <Steps>
-            <!-- sample config transform to change the connection string-->
             <RelocateConfigurationFile target="DatabaseCode.Tests.dll.{TestThreadId}.config" />
-            <!--<ConfigFileTransformation configFile="App.config">
-        <Transformation>
-          <![CDATA[<?xml version="1.0" encoding="utf-8"?>
-							<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-                <connectionStrings>
-                  <add name="MyDatabase" connectionString="Data Source=.;Initial Catalog=MyDatabaseForTesting;Integrated Security=True" 
-                       xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
-                </connectionStrings>
-							</configuration>
+            <ConfigFileTransformation configFile="App.config">
+                <Transformation>
+                    <![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+                    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+                        <appSettings>
+                            <add key="TestThread" value="{TestThreadId}" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)" />
+                        </appSettings>
+                    </configuration>
 						]]>
-        </Transformation>
-      </ConfigFileTransformation>-->
+                </Transformation>
+            </ConfigFileTransformation>
         </Steps>
     </DeploymentTransformation>
 </TestProfile>
