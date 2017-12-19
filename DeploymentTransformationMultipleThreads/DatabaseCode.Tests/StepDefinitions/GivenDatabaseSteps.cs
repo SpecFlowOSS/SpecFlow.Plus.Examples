@@ -27,7 +27,7 @@ namespace DatabaseCode.Tests.StepDefinitions
             _initializationDriver.CreateDatabaseFromTable(personsTable);
         }
 
-        [Given(@"I get the person ""(.*)"" ""(.*)"" from the database")]
+        [Given(@"I get the person '(.*)' '(.*)' from the database")]
         public void GivenIGetThePersonFromTheDatabase(string firstName, string lastName)
         {
             _readDriver.GetPerson(firstName, lastName);

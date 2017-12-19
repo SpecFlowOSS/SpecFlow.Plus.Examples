@@ -81,11 +81,11 @@ this.FeatureBackground();
 #line 10
     testRunner.Given("I have an empty database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
-    testRunner.When(string.Format("I insert a person \"{0}\" \"{1}\" into the database", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I insert a person \'{0}\' \'{1}\' into the database", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
     testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-    testRunner.Then(string.Format("the database should contain a person called \"{0}\" \"{1}\".", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the database should contain a person called \'{0}\' \'{1}\'.", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -115,11 +115,11 @@ this.FeatureBackground();
 #line 20
     testRunner.Given("I have a database containing the following persons:", ((string)(null)), table1, "Given ");
 #line 24
-    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("I get the person \'{0}\' \'{1}\' from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
-    testRunner.When(string.Format("I change its first name to \"{0}\"", newFirstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I change its first name to \'{0}\'", newFirstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
-    testRunner.And(string.Format("I change its last name to \"{0}\"", newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("I change its last name to \'{0}\'", newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
     testRunner.Then("saving and committing should throw an exception.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -151,15 +151,15 @@ this.FeatureBackground();
 #line 34
     testRunner.Given("I have a database containing the following persons:", ((string)(null)), table2, "Given ");
 #line 38
-    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("I get the person \'{0}\' \'{1}\' from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-    testRunner.When(string.Format("I delete a person called \"{0}\" \"{1}\"", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I delete a person called \'{0}\' \'{1}\'", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
-    testRunner.And(string.Format("I insert a person \"{0}\" \"{1}\" into the database", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("I insert a person \'{0}\' \'{1}\' into the database", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
     testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
-    testRunner.Then(string.Format("the database should contain a person called \"{0}\" \"{1}\".", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the database should contain a person called \'{0}\' \'{1}\'.", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -189,11 +189,11 @@ this.FeatureBackground();
 #line 49
     testRunner.Given("I have a database containing the following persons:", ((string)(null)), table3, "Given ");
 #line 52
-    testRunner.When(string.Format("I delete a person called \"{0}\" \"{1}\"", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I delete a person called \'{0}\' \'{1}\'", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
     testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
-    testRunner.Then(string.Format("the database should not contain a person called \"{0}\" \"{1}\".", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the database should not contain a person called \'{0}\' \'{1}\'.", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

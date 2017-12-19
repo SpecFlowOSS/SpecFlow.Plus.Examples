@@ -8,9 +8,9 @@ Background:
 
 Scenario Outline: Creating a person in an empty database
     Given I have an empty database
-    When I insert a person "<FirstName>" "<LastName>" into the database
+    When I insert a person '<FirstName>' '<LastName>' into the database
     And I save and commit the changes to the database
-    Then the database should contain a person called "<FirstName>" "<LastName>".
+    Then the database should contain a person called '<FirstName>' '<LastName>'.
 
     Examples:
     | FirstName | LastName |
@@ -21,9 +21,9 @@ Scenario Outline: Modifying a person's name in the database in a wrong way
         | FirstName | LastName |
         | Davdi     | Eiwne    |
 
-    And I get the person "<OldFirstName>" "<OldLastName>" from the database
-    When I change its first name to "<NewFirstName>"
-    And I change its last name to "<NewLastName>"
+    And I get the person '<OldFirstName>' '<OldLastName>' from the database
+    When I change its first name to '<NewFirstName>'
+    And I change its last name to '<NewLastName>'
     Then saving and committing should throw an exception.
 
     Examples:
@@ -35,11 +35,11 @@ Scenario Outline: Modifying a person's name in the database correctly
         | FirstName | LastName |
         | Davdi     | Eiwne    |
 
-    And I get the person "<OldFirstName>" "<OldLastName>" from the database
-    When I delete a person called "<OldFirstName>" "<OldLastName>"
-    And I insert a person "<NewFirstName>" "<NewLastName>" into the database
+    And I get the person '<OldFirstName>' '<OldLastName>' from the database
+    When I delete a person called '<OldFirstName>' '<OldLastName>'
+    And I insert a person '<NewFirstName>' '<NewLastName>' into the database
     And I save and commit the changes to the database
-    Then the database should contain a person called "<NewFirstName>" "<NewLastName>".
+    Then the database should contain a person called '<NewFirstName>' '<NewLastName>'.
 
     Examples:
     | OldFirstName | OldLastName | NewFirstName | NewLastName |
@@ -49,9 +49,9 @@ Scenario Outline: Deleting a person in the database
     Given I have a database containing the following persons:
         | FirstName | LastName |
         | David     | Eiwen    |
-    When I delete a person called "<FirstName>" "<LastName>"
+    When I delete a person called '<FirstName>' '<LastName>'
     And I save and commit the changes to the database
-    Then the database should not contain a person called "<FirstName>" "<LastName>".
+    Then the database should not contain a person called '<FirstName>' '<LastName>'.
 
     Examples:
     | FirstName | LastName |
