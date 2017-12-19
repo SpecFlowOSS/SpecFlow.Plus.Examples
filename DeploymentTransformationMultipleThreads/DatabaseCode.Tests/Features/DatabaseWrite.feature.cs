@@ -63,27 +63,37 @@ namespace DatabaseCode.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+    testRunner.Given("I have an empty database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         public virtual void CreatingAPersonInAnEmptyDatabase(string firstName, string lastName, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating a person in an empty database", exampleTags);
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 7
-    testRunner.Given("I have an empty database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
-    testRunner.When(string.Format("I insert a person \"{0}\" \"{1}\" into the database", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-    testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 10
+    testRunner.Given("I have an empty database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+    testRunner.When(string.Format("I insert a person \"{0}\" \"{1}\" into the database", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+    testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
     testRunner.Then(string.Format("the database should contain a person called \"{0}\" \"{1}\".", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Creating a person in an empty database, David", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("Creating a person in an empty database, David", SourceLine=16)]
         public virtual void CreatingAPersonInAnEmptyDatabase_David()
         {
-#line 6
+#line 9
 this.CreatingAPersonInAnEmptyDatabase("David", "Eiwen", ((string[])(null)));
 #line hidden
         }
@@ -91,8 +101,10 @@ this.CreatingAPersonInAnEmptyDatabase("David", "Eiwen", ((string[])(null)));
         public virtual void ModifyingAPersonsNameInTheDatabaseInAWrongWay(string oldFirstName, string oldLastName, string newFirstName, string newLastName, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modifying a person\'s name in the database in a wrong way", exampleTags);
-#line 16
+#line 19
 this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
@@ -100,24 +112,24 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "Davdi",
                         "Eiwne"});
-#line 17
+#line 20
     testRunner.Given("I have a database containing the following persons:", ((string)(null)), table1, "Given ");
-#line 21
-    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-    testRunner.When(string.Format("I change its first name to \"{0}\"", newFirstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
-    testRunner.And(string.Format("I change its last name to \"{0}\"", newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
+    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+    testRunner.When(string.Format("I change its first name to \"{0}\"", newFirstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+    testRunner.And(string.Format("I change its last name to \"{0}\"", newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
     testRunner.Then("saving and committing should throw an exception.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Modifying a person\'s name in the database in a wrong way, Davdi", SourceLine=27)]
+        [TechTalk.SpecRun.ScenarioAttribute("Modifying a person\'s name in the database in a wrong way, Davdi", SourceLine=30)]
         public virtual void ModifyingAPersonsNameInTheDatabaseInAWrongWay_Davdi()
         {
-#line 16
+#line 19
 this.ModifyingAPersonsNameInTheDatabaseInAWrongWay("Davdi", "Eiwne", "David", "Eiwen", ((string[])(null)));
 #line hidden
         }
@@ -125,8 +137,10 @@ this.ModifyingAPersonsNameInTheDatabaseInAWrongWay("Davdi", "Eiwne", "David", "E
         public virtual void ModifyingAPersonsNameInTheDatabaseCorrectly(string oldFirstName, string oldLastName, string newFirstName, string newLastName, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modifying a person\'s name in the database correctly", exampleTags);
-#line 30
+#line 33
 this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
@@ -134,26 +148,26 @@ this.ScenarioSetup(scenarioInfo);
             table2.AddRow(new string[] {
                         "Davdi",
                         "Eiwne"});
-#line 31
+#line 34
     testRunner.Given("I have a database containing the following persons:", ((string)(null)), table2, "Given ");
-#line 35
-    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
-    testRunner.When(string.Format("I delete a person called \"{0}\" \"{1}\"", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
-    testRunner.And(string.Format("I insert a person \"{0}\" \"{1}\" into the database", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
-    testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("I get the person \"{0}\" \"{1}\" from the database", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
+    testRunner.When(string.Format("I delete a person called \"{0}\" \"{1}\"", oldFirstName, oldLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+    testRunner.And(string.Format("I insert a person \"{0}\" \"{1}\" into the database", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+    testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
     testRunner.Then(string.Format("the database should contain a person called \"{0}\" \"{1}\".", newFirstName, newLastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Modifying a person\'s name in the database correctly, Davdi", SourceLine=42)]
+        [TechTalk.SpecRun.ScenarioAttribute("Modifying a person\'s name in the database correctly, Davdi", SourceLine=45)]
         public virtual void ModifyingAPersonsNameInTheDatabaseCorrectly_Davdi()
         {
-#line 30
+#line 33
 this.ModifyingAPersonsNameInTheDatabaseCorrectly("Davdi", "Eiwne", "David", "Eiwen", ((string[])(null)));
 #line hidden
         }
@@ -161,8 +175,10 @@ this.ModifyingAPersonsNameInTheDatabaseCorrectly("Davdi", "Eiwne", "David", "Eiw
         public virtual void DeletingAPersonInTheDatabase(string firstName, string lastName, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting a person in the database", exampleTags);
-#line 45
+#line 48
 this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
@@ -170,32 +186,34 @@ this.ScenarioSetup(scenarioInfo);
             table3.AddRow(new string[] {
                         "David",
                         "Eiwen"});
-#line 46
-    testRunner.Given("I have a database containing the following persons:", ((string)(null)), table3, "Given ");
 #line 49
+    testRunner.Given("I have a database containing the following persons:", ((string)(null)), table3, "Given ");
+#line 52
     testRunner.When(string.Format("I delete a person called \"{0}\" \"{1}\"", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 53
     testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
+#line 54
     testRunner.Then(string.Format("the database should not contain a person called \"{0}\" \"{1}\".", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Deleting a person in the database, David", SourceLine=54)]
+        [TechTalk.SpecRun.ScenarioAttribute("Deleting a person in the database, David", SourceLine=57)]
         public virtual void DeletingAPersonInTheDatabase_David()
         {
-#line 45
+#line 48
 this.DeletingAPersonInTheDatabase("David", "Eiwen", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Clearing all persons from the database", SourceLine=56)]
+        [TechTalk.SpecRun.ScenarioAttribute("Clearing all persons from the database", SourceLine=59)]
         public virtual void ClearingAllPersonsFromTheDatabase()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Clearing all persons from the database", ((string[])(null)));
-#line 57
+#line 60
 this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
@@ -203,13 +221,13 @@ this.ScenarioSetup(scenarioInfo);
             table4.AddRow(new string[] {
                         "David",
                         "Eiwen"});
-#line 58
-    testRunner.Given("I have a database containing the following persons:", ((string)(null)), table4, "Given ");
 #line 61
+    testRunner.Given("I have a database containing the following persons:", ((string)(null)), table4, "Given ");
+#line 64
     testRunner.When("I remove all persons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 65
     testRunner.And("I save and commit the changes to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
+#line 66
     testRunner.Then("the database should not contain any person.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

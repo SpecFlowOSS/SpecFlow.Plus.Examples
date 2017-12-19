@@ -3,6 +3,9 @@
     I want to modify the data inside my database
     in order to work properly
 
+Background: 
+    Given I have an empty database
+
 Scenario Outline: Creating a person in an empty database
     Given I have an empty database
     When I insert a person "<FirstName>" "<LastName>" into the database
