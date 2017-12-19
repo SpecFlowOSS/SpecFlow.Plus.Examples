@@ -2,6 +2,7 @@ This repository contains a number of sample projects for SpecFlow+:
 
 * AppVeyor_Support: A sample showing how to use SpecFlow+Runner with AppVeyor (http://www.appveyor.com)
 * CustomDeploymentSteps: A sample project based on the WindowsAppDriver project demonstrating how to use Custom Deployment Steps to set up your testing environment
+* DeploymentTransformationMultipleThreads: A sample project demonstrating how to use parallel test execution on a database using deployment transformation.
 * ExcelExample: A sample project for SpecFlow+ Excel demonstrating how to write Gherkin specifications and define example tables in Excel
 * FilterExample: A sample project demonstrating how to use filters to only run a subset of tests
 * Getting_Started: A very simple project based on the [Getting Started](http://www.specflow.org/getting-started/) guide. Includes a single SpecFlow+ Runner test and a very basic calculator application that is tested.
