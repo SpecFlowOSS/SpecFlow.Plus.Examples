@@ -25,7 +25,7 @@ namespace TestApplication.UiTests.Support
             {
                 var screenshot = takesScreenshot.GetScreenshot();
                 var tempFileName = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileNameWithoutExtension(Path.GetTempFileName())) + ".jpg";
-                screenshot.SaveAsFile(tempFileName, ImageFormat.Jpeg);
+                screenshot.SaveAsFile(tempFileName, ScreenshotImageFormat.Jpeg);
 
                 Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
             }
