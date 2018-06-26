@@ -6,6 +6,7 @@
 @Browser_Chrome
 @Browser_IE
 @Browser_Firefox
+@BasePage
 Scenario: Basepage is Calculator
 	Given I navigated to /
 	Then browser title is Calculator

@@ -66,18 +66,20 @@ namespace TestApplication.UiTests.Features
         [TechTalk.SpecRun.ScenarioAttribute("Basepage is Calculator", new string[] {
                 "Browser_Chrome",
                 "Browser_IE",
-                "Browser_Firefox"}, SourceLine=8)]
+                "Browser_Firefox",
+                "BasePage"}, SourceLine=9)]
         public virtual void BasepageIsCalculator()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basepage is Calculator", new string[] {
                         "Browser_Chrome",
                         "Browser_IE",
-                        "Browser_Firefox"});
-#line 9
-this.ScenarioSetup(scenarioInfo);
+                        "Browser_Firefox",
+                        "BasePage"});
 #line 10
- testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 11
+ testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
  testRunner.Then("browser title is Calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -93,17 +95,17 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Two Numbers", @__tags);
-#line 15
-this.ScenarioSetup(scenarioInfo);
 #line 16
- testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 17
- testRunner.And(string.Format("I have entered {0} into summandOne calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I navigated to /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
- testRunner.And(string.Format("I have entered {0} into summandTwo calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have entered {0} into summandOne calculator", summandOne), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I have entered {0} into summandTwo calculator", summandTwo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
+ testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
  testRunner.Then(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -111,20 +113,20 @@ this.ScenarioSetup(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 50", new string[] {
                 "Browser_IE",
-                "Browser_Chrome"}, SourceLine=23)]
+                "Browser_Chrome"}, SourceLine=24)]
         public virtual void AddTwoNumbers_50()
         {
-#line 15
+#line 16
 this.AddTwoNumbers("50", "70", "120", ((string[])(null)));
 #line hidden
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add Two Numbers, 1", new string[] {
                 "Browser_IE",
-                "Browser_Chrome"}, SourceLine=23)]
+                "Browser_Chrome"}, SourceLine=24)]
         public virtual void AddTwoNumbers_1()
         {
-#line 15
+#line 16
 this.AddTwoNumbers("1", "10", "11", ((string[])(null)));
 #line hidden
         }
@@ -138,3 +140,5 @@ this.AddTwoNumbers("1", "10", "11", ((string[])(null)));
 }
 #pragma warning restore
 #endregion
+
+
