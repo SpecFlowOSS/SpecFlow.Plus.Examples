@@ -6,14 +6,14 @@ The example is based on https://github.com/techtalk/SpecFlow.Plus.Examples/tree/
 ## Prerequisites
 To run this example, you need a running Selenium Grid. For installing, configuring and running have a look at: https://github.com/SeleniumHQ/selenium/wiki/Grid2
 
-##Info about Parallelisation and Browser
-###Chrome
+## Info about Parallelisation and Browser
+### Chrome
 everything works
 
-###Firefox
+### Firefox
 should work
 
-###Internet Explorer
+### Internet Explorer
 On the same pc, you will not get any gain, because as it looks like, IEDriverServer does not handle multi instances of IE very performant. (Status from 2016-09-13)
 Execute the tests on multiple nodes.
 
