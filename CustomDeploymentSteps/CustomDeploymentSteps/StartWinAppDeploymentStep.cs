@@ -6,20 +6,21 @@ namespace CustomDeploymentSteps
 {
     public class StartWinAppDeploymentStep : IDeploymentTransformationStep
     {
-        private Process _winApp;
-
         public void Apply(IDeploymentContext deploymentContext)
         {
             var pathToWinApp = deploymentContext.CustomData[this] as string;
             if (pathToWinApp != null)
             {
-                _winApp = Process.Start(pathToWinApp);
+                var winApp = Process.Start(pathToWinApp);
+
+                deploymentContext.CustomData["WinAppDriver"] = winApp;
             }
         }
 
         public void Restore(IDeploymentContext deploymentContext)
         {
-            _winApp.Kill();
+            var winApp = (Process)deploymentContext.CustomData["WinAppDriver"];
+            winApp?.Kill();
         }
     }
 }

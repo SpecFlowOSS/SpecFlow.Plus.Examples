@@ -21,7 +21,10 @@ namespace CalculatorUnitTests.Driver
 
                 var capabilities = new DesiredCapabilities();
                 capabilities.SetCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
+                capabilities.SetCapability("deviceName", "WindowsPC");
                 _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities);
+
+                _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1.5));
 
                 return _driver;
             }
@@ -29,7 +32,11 @@ namespace CalculatorUnitTests.Driver
 
         public void Dispose()
         {
-            _driver.Dispose();
+            if (_driver != null)
+            {
+                _driver.Quit();
+                _driver = null;
+            }
         }
     }
 }

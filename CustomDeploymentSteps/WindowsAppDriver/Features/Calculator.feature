@@ -5,7 +5,7 @@
 
 Scenario: Basepage is Calculator
 	Given I navigated to Standard Calculator
-	Then Calculator title is STANDARD
+	Then Calculator title is Standard
 
 Scenario Outline: Add Two Numbers
 	Given I navigated to Standard Calculator

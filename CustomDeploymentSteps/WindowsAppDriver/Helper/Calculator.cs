@@ -39,7 +39,7 @@ namespace CalculatorUnitTests.Helper
 
         public string GetResult()
         {
-            return _driver.Current.FindElementByAccessibilityId("CalculatorResults").Text.Trim();
+            return _driver.Current.FindElementByAccessibilityId("CalculatorResults").Text.Trim().Replace("Display is ", "");
         }
     }
 }
