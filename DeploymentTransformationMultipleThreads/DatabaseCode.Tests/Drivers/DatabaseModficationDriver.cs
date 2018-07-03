@@ -52,7 +52,7 @@ namespace DatabaseCode.Tests.Drivers
         public void SaveAndCommitThrowsException<T>() where T : Exception
         {
             Action action = SaveAndCommit;
-            action.ShouldThrow<T>();
+            action.Should().Throw<T>();
         }
     }
 }
