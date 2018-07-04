@@ -1,7 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Example;
+using FluentAssertions;
 
 namespace MySpecs
 {
@@ -39,7 +39,7 @@ namespace MySpecs
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
-            Assert.AreEqual(expectedResult, result);
+            expectedResult.Should().Be(result);
         }
     }
 }
