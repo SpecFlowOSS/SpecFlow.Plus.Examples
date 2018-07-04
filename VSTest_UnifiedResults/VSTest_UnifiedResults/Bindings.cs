@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 
 namespace VSTest_UnifiedResults
 {
@@ -21,7 +20,7 @@ namespace VSTest_UnifiedResults
 
             if (_runCounter == 1)
             {
-                Assert.Fail("This scenario doesn't work the first time it runs");
+                throw new System.Exception("This scenario doesn't work the first time it runs");
             }
         }
 
