@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using CalculatorUnitTests.Driver;
 using CalculatorUnitTests.Helper;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
@@ -67,13 +68,13 @@ namespace CalculatorUnitTests.Steps
         [Then(@"Calculator title is (.*)")]
         public void ThenBrowserTitleIs(string p0)
         {
-            Assert.IsTrue(_calculator.GetTitle().Contains(p0));
+            _calculator.GetTitle().Should().Be(p0);
         }
 
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(string p0)
         {
-            Assert.IsTrue(_calculator.GetResult().Contains(p0));
+            _calculator.GetResult().Should().Be(p0);
         }
     }
 }

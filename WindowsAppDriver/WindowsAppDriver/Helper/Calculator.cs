@@ -37,9 +37,10 @@ namespace CalculatorUnitTests.Helper
             return _driver.Current.FindElementByAccessibilityId("Header").Text.Trim();
         }
 
+
         public string GetResult()
         {
-            return _driver.Current.FindElementByAccessibilityId("CalculatorResults").Text.Trim();
+            return _driver.Current.FindElementByAccessibilityId("CalculatorResults").Text.Trim().Replace("Display is ", "");
         }
     }
 }
