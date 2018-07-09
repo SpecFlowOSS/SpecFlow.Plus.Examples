@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 
@@ -16,18 +19,18 @@ namespace TestApplication.UiTests.Drivers
             {
                 if (_currentWebDriver != null)
                     return _currentWebDriver;
-                DesiredCapabilities desiredCapabilities;
+                DriverOptions desiredCapabilities;
 
                 switch (BrowserConfig)
                 {
                     case "IE":
-                        desiredCapabilities = DesiredCapabilities.InternetExplorer();
+                        desiredCapabilities = new InternetExplorerOptions();
                         break;
                     case "Chrome":
-                        desiredCapabilities = DesiredCapabilities.Chrome();
+                        desiredCapabilities = new ChromeOptions();
                         break;
                     case "Firefox":
-                        desiredCapabilities = DesiredCapabilities.Firefox();
+                        desiredCapabilities = new FirefoxOptions();
                         break;
                     default:
                         throw new NotSupportedException($"{BrowserConfig} is not a supported browser");
