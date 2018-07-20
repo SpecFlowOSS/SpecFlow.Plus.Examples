@@ -7,6 +7,7 @@ This repository contains a number of sample projects for SpecFlow+:
 * FilterExample: A sample project demonstrating how to use filters to only run a subset of tests
 * Getting_Started: A very simple project based on the [Getting Started](http://www.specflow.org/getting-started/) guide. Includes a single SpecFlow+ Runner test and a very basic calculator application that is tested.
 * Getting_Started_Excel: Similar to the Getting Started for SpecFlow+ Runner, this project includes a basic calculator using features defined in Excel. Refer to the [Getting Started with SpecFlow+ Excel](http://specflow.org/plus/excel/getting-started/) guide for more information on getting started with SpecFlow+ Excel.
+* Getting_Started_MSBuild: Based on the Getting Started sample for SpecFlow+ Runner and uses MSBuild code-behind file generation
 * MultipleReports: A sample project showing how to configure SpecFlow+ Runner to output multiple reports using custom templates.
 * TestThreadIsolation: A sample project showing the effects of different test thread isolation configurations for multithreaded testing
 * SeleniumGridWebTest: A sample project using Selenium Grid Web with SpecFlow+ Runner
