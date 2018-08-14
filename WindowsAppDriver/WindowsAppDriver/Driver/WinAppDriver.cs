@@ -31,7 +31,7 @@ namespace CalculatorUnitTests.Driver
 
         public void Dispose()
         {
-            _driver.Dispose();
+            _driver?.Dispose();
         }
     }
 }
