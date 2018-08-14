@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpecFlow" Version="2.4.0-preview20180718" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="2.4.0-preview20180718" />
+    <PackageReference Include="SpecFlow" Version="2.4.0-preview20180814" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="2.4.0-preview20180814" />
     <PackageReference Include="SpecRun.Runner" Version="1.8.0-rc003" />
     <PackageReference Include="SpecRun.SpecFlow" Version="1.8.0-rc003" />
   </ItemGroup>
@@ -18,10 +18,6 @@
     <None Update="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 
  
