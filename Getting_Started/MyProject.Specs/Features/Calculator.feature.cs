@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace MyProject.Specs
+namespace MyProject.Specs.Features
 {
     using TechTalk.SpecFlow;
     
@@ -18,7 +18,7 @@ namespace MyProject.Specs
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Calculator", Description="\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-        "f two numbers", SourceFile="Calculator.feature", SourceLine=0)]
+        "f two numbers", SourceFile="Features\\Calculator.feature", SourceLine=0)]
     public partial class CalculatorFeature
     {
         
