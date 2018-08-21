@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-namespace MutipleReports
+namespace MutipleReports.Steps
 {
     [Binding]
     public class CalculatorSteps
