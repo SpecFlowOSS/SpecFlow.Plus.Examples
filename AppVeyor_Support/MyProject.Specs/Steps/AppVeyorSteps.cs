@@ -1,8 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MyProject.Specs
+namespace MyProject.Specs.Steps
 {
     [Binding]
     public class AppVeyorSteps
@@ -44,6 +43,5 @@ namespace MyProject.Specs
         {
             ScenarioContext.Current.Pending();
         }
-
     }
 }

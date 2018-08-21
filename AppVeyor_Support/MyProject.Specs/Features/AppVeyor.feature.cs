@@ -10,14 +10,14 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace MyProject.Specs
+namespace MyProject.Specs.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("AppVeyor Support", SourceFile="AppVeyor.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("AppVeyor Support", SourceFile="Features\\AppVeyor.feature", SourceLine=0)]
     public partial class AppVeyorSupportFeature
     {
         
