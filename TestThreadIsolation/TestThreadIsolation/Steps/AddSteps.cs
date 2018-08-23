@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 using TestCalculator;
 
-namespace TestThreadIsolation
+namespace TestThreadIsolation.Steps
 {
     [Binding]
     public class AddSteps

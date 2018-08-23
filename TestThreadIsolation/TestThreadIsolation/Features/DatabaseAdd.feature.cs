@@ -10,31 +10,31 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TestThreadIsolation
+namespace TestThreadIsolation.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Memory Add", new string[] {
-            "Memory"}, Description="\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-        "f two number", SourceFile="MemoryAdd.feature", SourceLine=1)]
-    public partial class MemoryAddFeature
+    [TechTalk.SpecRun.FeatureAttribute("Database Add", new string[] {
+            "Database"}, Description="\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
+        "f two number", SourceFile="Features\\DatabaseAdd.feature", SourceLine=1)]
+    public partial class DatabaseAddFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "MemoryAdd.feature"
+#line 1 "DatabaseAdd.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Memory Add", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Database Add", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
                     "f two number", ProgrammingLanguage.CSharp, new string[] {
-                        "Memory"});
+                        "Database"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,65 +73,65 @@ namespace TestThreadIsolation
         public virtual void AddTwoNumbers(string number1, string number2, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, exampleTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And(string.Format("I have entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", number1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I have entered {0} into the calculator", number2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
+ testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
  testRunner.Then(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 1", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 1", SourceLine=15)]
         public virtual void AddTwoNumbers_1()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("1", "2", "3", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 4", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 4", SourceLine=15)]
         public virtual void AddTwoNumbers_4()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("4", "5", "9", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 10", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 10", SourceLine=15)]
         public virtual void AddTwoNumbers_10()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("10", "11", "21", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 22", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 22", SourceLine=15)]
         public virtual void AddTwoNumbers_22()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("22", "23", "45", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 46", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 46", SourceLine=15)]
         public virtual void AddTwoNumbers_46()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("46", "47", "93", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 94", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers, 94", SourceLine=15)]
         public virtual void AddTwoNumbers_94()
         {
-#line 7
+#line 8
 this.AddTwoNumbers("94", "95", "189", ((string[])(null)));
 #line hidden
         }
