@@ -2,7 +2,8 @@ version: 1.0.{build}
 build:
   project: AppVeyor_Support\MyProject.Specs.sln
   verbosity: minimal
-  
+
+image: Visual Studio 2017
   
 before_build:
   - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
