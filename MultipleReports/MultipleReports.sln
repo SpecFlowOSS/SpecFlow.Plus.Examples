@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutipleReports", "MutipleReports\MutipleReports.csproj", "{C7C42B43-84E4-4139-9DF6-4F08CE0D4117}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleReports", "MultipleReports\MultipleReports.csproj", "{C7C42B43-84E4-4139-9DF6-4F08CE0D4117}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{82301DB1-4325-4A96-AC56-6B4716158500}"
 EndProject
