@@ -10,7 +10,7 @@ This example also takes a screenshot after each step and embeds the screnshot in
 ### app.config
 In _configuration/appSettings/browser_ the used browser is configured. This value is changed by a ConfigFileTransformation in the **Default.srProfile**
 
-### Default.srProfile
+### Default.srprofile
 
 #### Targets
 3 Targets (one for every browser) are defined here. They have a filter on the tag _Browser_\_**__{BrowserName}__**, so only scenarios with the tag is executed in this target.
