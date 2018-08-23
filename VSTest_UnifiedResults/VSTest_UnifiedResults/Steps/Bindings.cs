@@ -1,16 +1,15 @@
 ﻿using TechTalk.SpecFlow;
 
-namespace VSTest_UnifiedResults
+namespace VSTest_UnifiedResults.Steps
 {
     [Binding]
-    class Bindings
+    public class Bindings
     {
         private static int _runCounter;
 
         [Given(@"a always working scenario")]
         public void GivenAAlwaysWorkingScenario()
         {
-
         }
 
         [Given(@"a scenario that only works the second time")]

@@ -10,14 +10,14 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace VSTest_UnifiedResults
+namespace VSTest_UnifiedResults.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Scenarios", SourceFile="Scenarios.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Scenarios", SourceFile="Features\\Scenarios.feature", SourceLine=0)]
     public partial class ScenariosFeature
     {
         
