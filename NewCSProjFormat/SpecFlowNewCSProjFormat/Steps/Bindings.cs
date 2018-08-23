@@ -1,7 +1,6 @@
-﻿using System;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 
-namespace SpecFlowNewCSProjFormat
+namespace SpecFlowNewCSProjFormat.Steps
 {
     [Binding]
     public class Bindings

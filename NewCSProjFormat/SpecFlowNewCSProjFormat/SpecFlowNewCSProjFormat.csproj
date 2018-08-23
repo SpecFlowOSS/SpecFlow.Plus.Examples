@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpecFlow" Version="2.4.0-preview20180814" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="2.4.0-preview20180814" />
-    <PackageReference Include="SpecRun.Runner" Version="1.8.0-rc003" />
-    <PackageReference Include="SpecRun.SpecFlow" Version="1.8.0-rc003" />
+    <PackageReference Include="SpecFlow" Version="2.4.0" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="2.4.0" />
+    <PackageReference Include="SpecRun.Runner" Version="1.8.0" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="1.8.0" />
   </ItemGroup>
 
   <ItemGroup>
