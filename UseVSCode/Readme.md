@@ -1,42 +1,42 @@
 # How to use VSCode to work with SpecFlow
 
-Using VSCode to write your SpecFlow scenarios is easy, if you install the right extension and have setup your project right.
+Using VSCode to write your SpecFlow scenarios is easy, as long as you install the right extension and have setup your project correctly.
 
-## Project setup
+## Project Setup
 
-You have to use MSBuild to generate the code-behind files of your feature files.  
-See <insert link to MSBuild blog post here> how to do this.
+You have to use MSBuild to generate the code-behind files of your feature files. See <insert link to MSBuild blog post here> how to do this.
 
-Without this, you don't get any tests to execute.
+If you do not do this, you will not have any tests to execute.
 
-## Install VSCode Extension and configure it
+## Installing and Configuring the VSCode Extension
 
 ### For Writing Feature Files
 
-We found a really good extension from Alex Krechik which provides a lot of nice features for writing feature files.  
+We found a really good extension from Alex Krechik, which provides a lot of nice features for writing feature files.  
 It is called `Cucumber (Gherkin) Full Support Extension for VSCode` and can be found [here](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete).
 
-The extension provides for .NET projects following features:
+The extension provides the following features for .NET projects:
 
 - Syntax highlighting
-- formatting of whole feature file
-- limited IntelliSense/AutocComplete
+- Formatting the whole feature file
+- Limited IntelliSense/AutocComplete
 
-We didn't got the AutoComplete from steps that are defined in the C# code to work. If you know how to do it, please give us a hint.
+Unfortunately, we were unable to get the AutoComplete from steps already defined in the C# code to work. If you know how to do it, please let us know!
 
-After installing the extension, you can configure it in the `settings.json`. This is mostly needed for the IntelliSense/AutoComplete information (which doesn't work with C#), so you could skip this.  
-If you want to do it, you can find here the steps to do so: <https://github.com/alexkrechik/VSCucumberAutoComplete#how-to-use>
+After installing the extension, you can configure it in the `settings.json` file. This is mostly needed for the IntelliSense/AutoComplete information (which doesn't work with C#), so you could skip this step.  
+If you want to change the configuration, you can find the steps required to do so here: <https://github.com/alexkrechik/VSCucumberAutoComplete#how-to-use>
 
-When you are done with it, you will get nice colorful feature files in VSCode:
+Once you are done, you will get nice colorful feature files in VSCode:
 
 ![colorful feature file](art/ColorfulFeatureFile.png)
 
-### For Executing the Scenarios
+### Executing Scenarios
 
-If you are used to the Test Explorer of Visual Studio and don't like to execute the tests via command line, there is an extension from Jun Han to bring this feature to VSCode.  
-It's the `.NET Core Test Explorer` extension, which is available [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
+If you are used to the Test Explorer in Visual Studio, and don't like to execute tests via command line, you can use Jun Han's 
+`.NET Core Test Explorer` extension that adds this feature to VSCode.  
+You can find the extnesion [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
 
-After configuring the `dotnet-test-explorer.testProjectPath` path in your settings.json, you can start to use it.
+After configuring the `dotnet-test-explorer.testProjectPath` path in your `settings.json`, you can start to use it. <!-- was muss man hier eintragen> -->
 For this example project, the test explorer looks like this:
 
 **Before executing the scenarios:**
@@ -47,12 +47,12 @@ For this example project, the test explorer looks like this:
 
 ![test explorer](art/TestExplorerAfterTestRun.png)
 
-And so does it look like in a feature file:
+And this is how it looks in a feature file:
 
 ![test result in a feature file](art/TestResult.png)
 
-You don't get the scenario at his title marked as failing, but you have the red lines at the last step of the failing scenario.
+While the scenario title is not marked as failing, you have the red lines at the last step of the failing scenario.
 
 ## Conclusion
 
-Yes, we don't have a dedicated SpecFlow extension for VSCode. But there are already other extensions out there, that helps you to use VSCode for writing feature files and executing scenarios.
+While there is no dedicated SpecFlow extension for VSCode, there are already other extensions available that help you to use VSCode to write feature files and execute scenarios.
