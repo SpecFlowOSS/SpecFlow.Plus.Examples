@@ -1,6 +1,6 @@
 # How to use VSCode to work with SpecFlow
 
-Using VSCode to write your SpecFlow scenarios is easy, as long as you install the right extension and have setup your project correctly.
+Using VSCode to write your SpecFlow scenarios is easy, as long as you install the right extension and have set up your project correctly.
 
 ## Project Setup
 
@@ -10,7 +10,7 @@ If you do not do this, you will not have any tests to execute.
 
 ## Installing and Configuring the VSCode Extension
 
-### For Writing Feature Files
+### Writing Feature Files
 
 We found a really good extension from Alex Krechik, which provides a lot of nice features for writing feature files.  
 It is called `Cucumber (Gherkin) Full Support Extension for VSCode` and can be found [here](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete).
@@ -18,8 +18,8 @@ It is called `Cucumber (Gherkin) Full Support Extension for VSCode` and can be f
 The extension provides the following features for .NET projects:
 
 - Syntax highlighting
-- Formatting the whole feature file
-- Limited IntelliSense/AutocComplete
+- Formatting of the whole feature file
+- Limited IntelliSense/AutoComplete
 
 Unfortunately, we were unable to get the AutoComplete from steps already defined in the C# code to work. If you know how to do it, please let us know!
 
@@ -32,11 +32,9 @@ Once you are done, you will get nice colorful feature files in VSCode:
 
 ### Executing Scenarios
 
-If you are used to the Test Explorer in Visual Studio, and don't like to execute tests via command line, you can use Jun Han's 
-`.NET Core Test Explorer` extension that adds this feature to VSCode.  
-You can find the extnesion [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
+If you are used to the Test Explorer in Visual Studio, and don't like to execute tests via the command line, you can use Jun Han's `.NET Core Test Explorer` extension that adds this feature to VSCode. You can find the extension [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer).
 
-After configuring the `dotnet-test-explorer.testProjectPath` path in your `settings.json`, you can start to use it. <!-- was muss man hier eintragen> -->
+After setting the `dotnet-test-explorer.testProjectPath` path in your `settings.json` to the path of your solution, you can start to use it.
 For this example project, the test explorer looks like this:
 
 **Before executing the scenarios:**
