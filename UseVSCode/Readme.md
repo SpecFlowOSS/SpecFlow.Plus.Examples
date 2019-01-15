@@ -4,7 +4,7 @@ Using VSCode to write your SpecFlow scenarios is easy, as long as you install th
 
 ## Project Setup
 
-You have to use MSBuild to generate the code-behind files of your feature files. See <insert link to MSBuild blog post here> how to do this.
+You have to use MSBuild to generate the code-behind files of your feature files. See [here](https://specflow.org/2019/generating-code-behind-files-using-msbuild) for more information on how to do this.
 
 If you do not do this, you will not have any tests to execute.
 
