@@ -1,0 +1,5 @@
+{
+    "dotnet-test-explorer.testProjectPath": "src/",
+    "dotnet-test-explorer.autoExpandTree":true,
+    
+}

@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "alexkrechik.cucumberautocomplete",
+        "ms-vscode.csharp",
+        "formulahendry.dotnet-test-explorer"
+    ]
+}
