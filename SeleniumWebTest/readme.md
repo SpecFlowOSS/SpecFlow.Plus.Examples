@@ -18,11 +18,11 @@ In _configuration/appSettings/browser_ the used browser is configured. This valu
 #### DeploymentSteps
 2 deployment steps are configured
 1. IISExpress - this starts a IIS Express instance, so you do not have to check it manually that it is running
-2. ConfigFileTransformation - this sets the _configuration/appSettings/browser_ to the target name
+2. EnvironmentVariable - this sets the environment variable *Test_Browser* to the desired browser name
 
 
 ### WebDriver.cs
-This driver provides you access to the appropriate Selenium WebDriver. It uses the _configuration/appSettings/browser_ value for this.
+This driver provides you access to the appropriate Selenium WebDriver. It uses the aforementioned environment variable *Test_Browser* value for this, which is set in the target configuration.
 To get access to the Selenium Web Driver, use the _Current_ property on it. Use [Context Injection](http://www.specflow.org/documentation/Context-Injection/) to get the instance.
 
 
