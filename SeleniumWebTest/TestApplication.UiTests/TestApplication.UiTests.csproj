@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.props" Condition="Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.props')" />
-  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.props')" />
-  <Import Project="..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.props" Condition="Exists('..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.props')" />
+  <Import Project="..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.props" Condition="Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.props')" />
+  <Import Project="..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.props" Condition="Exists('..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.props')" />
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.props')" />
   <Import Project="..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.props" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -59,7 +59,7 @@
       <HintPath>..\packages\SpecRun.Runner.1.7.0\tools\RazorEngine.dll</HintPath>
     </Reference>
     <Reference Include="SpecRun.Runtime.SpecFlowPlugin, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\lib\net45\SpecRun.Runtime.SpecFlowPlugin.dll</HintPath>
+      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\lib\net45\SpecRun.Runtime.SpecFlowPlugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -77,14 +77,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecFlow.3.0.188\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <HintPath>..\packages\SpecFlow.3.0.213\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="TechTalk.SpecRun, Version=3.0.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\lib\net45\TechTalk.SpecRun.dll</HintPath>
+      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\lib\net45\TechTalk.SpecRun.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TechTalk.SpecRun.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\lib\net45\TechTalk.SpecRun.Common.dll</HintPath>
+      <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\lib\net45\TechTalk.SpecRun.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TechTalk.SpecRun.Framework">
@@ -180,12 +180,12 @@
     <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.targets'))" />
     <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets'))" />
-    <Error Condition="!Exists('..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.props'))" />
-    <Error Condition="!Exists('..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.targets'))" />
-    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.props'))" />
-    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.targets'))" />
-    <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.props'))" />
-    <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.props'))" />
+    <Error Condition="!Exists('..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.props'))" />
+    <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.targets" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.15.0.0\build\net45\Microsoft.Net.Test.Sdk.targets')" />
   <Import Project="..\packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" />
@@ -196,13 +196,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.targets" Condition="Exists('..\packages\SpecRun.Runner.3.0.255\build\SpecRun.Runner.targets')" />
-  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.188\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
-  <Import Project="..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.targets" Condition="Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.255\build\SpecRun.SpecFlow.3-0-0.targets')" />
   <Target Name="AfterUpdateFeatureFilesInProject">
     <!-- include any generated SpecFlow files in the compilation of the project if not included yet -->
     <ItemGroup>
       <Compile Include="**\*.feature.cs" Exclude="@(Compile)" />
     </ItemGroup>
   </Target>
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.0.213\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+  <Import Project="..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.targets" Condition="Exists('..\packages\SpecRun.Runner.3.0.347\build\SpecRun.Runner.targets')" />
+  <Import Project="..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.targets" Condition="Exists('..\packages\SpecRun.SpecFlow.3-0-0.3.0.347\build\SpecRun.SpecFlow.3-0-0.targets')" />
 </Project>
