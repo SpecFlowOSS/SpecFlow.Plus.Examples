@@ -11,34 +11,23 @@ namespace TestApplication.UiTests.Drivers
     public class WebDriver
     {
         private IWebDriver _currentWebDriver;
+        private WebDriverWait _wait;
+
+        public string SeleniumBaseUrl => ConfigurationManager.AppSettings["seleniumBaseUrl"];
 
         public IWebDriver Current
         {
             get
             {
-                if (_currentWebDriver != null)
-                    return _currentWebDriver;
-
-                switch (BrowserConfig)
+                if (_currentWebDriver == null)
                 {
-                    case "IE":
-                        _currentWebDriver = new InternetExplorerDriver(new InternetExplorerOptions() { IgnoreZoomLevel = true }) { Url = SeleniumBaseUrl };
-                        break;
-                    case "Chrome":
-                        _currentWebDriver = new ChromeDriver() { Url = SeleniumBaseUrl };
-                        break;
-                    case "Firefox":
-                        _currentWebDriver = new FirefoxDriver() { Url = SeleniumBaseUrl };
-                        break;
-                    default:
-                        throw new NotSupportedException($"{BrowserConfig} is not a supported browser");
+                    _currentWebDriver = GetWebDriver();
                 }
 
                 return _currentWebDriver;
             }
         }
 
-        private WebDriverWait _wait;
         public WebDriverWait Wait
         {
             get
@@ -51,8 +40,17 @@ namespace TestApplication.UiTests.Drivers
             }
         }
 
-        protected string BrowserConfig => ConfigurationManager.AppSettings["browser"];
-        protected string SeleniumBaseUrl => ConfigurationManager.AppSettings["seleniumBaseUrl"];
+        private IWebDriver GetWebDriver()
+        {
+            switch (Environment.GetEnvironmentVariable("Test_Browser"))
+            {
+                case "IE": return new InternetExplorerDriver(new InternetExplorerOptions { IgnoreZoomLevel = true }) { Url = SeleniumBaseUrl };
+                case "Chrome": return new ChromeDriver { Url = SeleniumBaseUrl };
+                case "Firefox": return new FirefoxDriver { Url = SeleniumBaseUrl };
+                case string browser: throw new NotSupportedException($"{browser} is not a supported browser");
+                default: throw new NotSupportedException("not supported browser: <null>");
+            }
+        }
 
         public void Quit()
         {
