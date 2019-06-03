@@ -16,13 +16,13 @@
       <ConfigFileTransformation configFile="App.config" >
         <Transformation>
           <![CDATA[<?xml version="1.0" encoding="utf-8"?>
-							<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+              <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
                               <appSettings>
                                 <add key="browser" value="{Target}" 
                                  xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)" />
                               </appSettings>
-							</configuration>
-						]]>
+              </configuration>
+            ]]>
         </Transformation>
       </ConfigFileTransformation>
     </Steps>
