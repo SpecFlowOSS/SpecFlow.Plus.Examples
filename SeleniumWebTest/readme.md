@@ -10,7 +10,7 @@ This example also takes a screenshot after each step and embeds the screnshot in
 ### Default.srprofile
 
 #### Targets
-3 Targets are defined here, one for each browser. The targets have a filter applied so that only those scenarios tagged for a particular browser are executed by the target (using "@Browser_IE", "@Browser_Chrome", "Browser_Firefox").
+3 Targets are defined here, one for each browser. The targets have a filter applied so that only those scenarios tagged for a particular browser are executed by the target (using "@Browser_IE", "@Browser_Chrome", "@Browser_Firefox").
 
 #### DeploymentSteps
 Deployment transformations steps are configured:
