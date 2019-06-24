@@ -5,6 +5,8 @@ The example is based on https://github.com/baseclass/Contrib.SpecFlow.Selenium.N
 
 This example also takes a screenshot after each step and embeds the screnshot in the final report. Refer to the documentation [here] (http://www.specflow.org/plus/documentation/Tutorial:-Customising-Reports) for an explanation of how the screenshot's path is passed to the report.
 
+There is an article covering this project [here](https://specflow.org/2019/targeting-multiple-browser-with-a-single-test-with-specflow-3/).
+
 ## Important parts
 
 ### Default.srprofile
