@@ -1,4 +1,4 @@
-# Selenium Gird Web Test Example
+# Selenium Grid Web Test Example
 
 This is a example how to use SpecFlow and SpecFlow+Runner to run Selenium Web Tests for different Browsers.  
 The example is based on https://github.com/techtalk/SpecFlow.Plus.Examples/tree/master/SeleniumWebTest
