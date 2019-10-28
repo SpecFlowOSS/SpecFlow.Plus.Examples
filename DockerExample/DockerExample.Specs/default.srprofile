@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="DockerExample.Specs" projectId="{88deb3a1-fcc9-4024-8d60-489b612c02cf}" />
+  
+  <TestAssemblyPaths>
+    <TestAssemblyPath>DockerExample.Specs.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+</TestProfile>
