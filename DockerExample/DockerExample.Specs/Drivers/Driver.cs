@@ -7,17 +7,16 @@ namespace DockerExample.Specs.Drivers
         
         public void CreateBackground() 
         {
-            throw new NotImplementedException();
         }
 
         public void ExecuteAction() 
         {
-            throw new NotImplementedException();
+            
         }
 
         public void CheckCondition() 
         {
-            throw new NotImplementedException();
+            
         }
 
     }

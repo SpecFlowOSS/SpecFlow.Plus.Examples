@@ -6,10 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
-    <PackageReference Include="SpecFlow" Version="3.1.42-beta" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.42-beta" />
-    <PackageReference Include="SpecRun.SpecFlow.3-1-0" Version="3.1.12-beta" />
-    <PackageReference Include="SpecRun.Runner" Version="3.1.12-beta" />
+    <PackageReference Include="SpecFlow" Version="3.1.48-beta" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.48-beta" />
+    <PackageReference Include="SpecRun.SpecFlow.3-1-0" Version="3.1.21-beta" />
+    <PackageReference Include="SpecRun.Runner" Version="3.1.21-beta" />
     
   </ItemGroup>
 
