@@ -39,11 +39,6 @@ Includes a single SpecFlow+ Runner test and a very basic calculator application 
 Similar to the Getting Started for SpecFlow+ Runner, this project includes a basic calculator using features defined in Excel.
 Refer to the [Getting Started with SpecFlow+ Excel](http://specflow.org/plus/excel/getting-started/) guide for more information on getting started with SpecFlow+ Excel.
 
-## Getting_Started_MSBuild
-[Readme](Getting_Started_MSBuild/readme.md)
-
-Based on the Getting Started sample for SpecFlow+ Runner and uses MSBuild code-behind file generation.
-
 ## MultipleReports
 [Readme](MultipleReports/readme.md)
 
