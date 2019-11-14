@@ -239,3 +239,6 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
+# SpecFlow generated files
+*.feature.cs
+*.feature.vb

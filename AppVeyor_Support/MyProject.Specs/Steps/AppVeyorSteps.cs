@@ -6,6 +6,13 @@ namespace MyProject.Specs.Steps
     [Binding]
     public class AppVeyorSteps
     {
+        private readonly ScenarioContext _scenarioContext;
+
+        public AppVeyorSteps(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+
         [Given(@"I have a passing SpecFlow project")]
         public void GivenIHaveAPassingSpecFlowProject()
         {
@@ -35,13 +42,13 @@ namespace MyProject.Specs.Steps
         [Given(@"I have a SpecFlow project which has not all step bound")]
         public void GivenIHaveASpecFlowProjectWhichHasNotAllStepBound()
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
 
         [Then(@"the tests are run and it is inconclusive")]
         public void ThenTheTestsAreRunAndItIsInconclusive()
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
     }
 }
