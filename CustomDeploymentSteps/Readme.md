@@ -7,7 +7,7 @@ and utilizes Custom Deployment Steps to start/stop the Windows App Driver.
 ## Setup
 
 In order for this project to work [WinAppDriver](https://github.com/Microsoft/WinAppDriver/releases) must be installed on the system and
-the path to WinAppDriver.exe must bepassed as an argument to the Custom Deployment step in Default.srprofile.
+the path to WinAppDriver.exe must be passed as an argument to the Custom Deployment step in Default.srprofile.
 
 ## Related Documentation
 

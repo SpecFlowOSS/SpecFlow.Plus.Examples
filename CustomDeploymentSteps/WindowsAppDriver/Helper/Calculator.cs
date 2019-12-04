@@ -1,8 +1,7 @@
-﻿using CalculatorUnitTests.Driver;
+﻿using WindowsAppDriver.Driver;
 
-namespace CalculatorUnitTests.Helper
+namespace WindowsAppDriver.Helper
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Calculator
     {
         private readonly WinAppDriver _driver;
@@ -10,7 +9,6 @@ namespace CalculatorUnitTests.Helper
         public Calculator(WinAppDriver driver)
         {
             _driver = driver;
-
         }
 
         public void EnterNumber(string number)
