@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FluentAssertions;
 using TechTalk.SpecFlow;
 using TestCalculator;
 
@@ -53,7 +53,7 @@ namespace ExcelExample.Steps
         [Then(@"The result should be (.*) on the screen")]
         public void ThenTheResltShouldBeOnTheScreen(int expectedResult)
         {
-            Assert.AreEqual(expected: expectedResult, actual: _calculator.Result);
+            _calculator.Result.Should().Be(expectedResult);
         }
     }
 }
