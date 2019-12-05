@@ -1,5 +1,5 @@
 ﻿using Example;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FluentAssertions;
 using TechTalk.SpecFlow;
 
 namespace MyProject.Specs.Steps
@@ -31,7 +31,7 @@ namespace MyProject.Specs.Steps
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
-            Assert.AreEqual(expectedResult, _result);
+            _result.Should().Be(expectedResult);
         }
     }
 }
