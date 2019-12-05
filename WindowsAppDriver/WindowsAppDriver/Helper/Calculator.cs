@@ -1,8 +1,7 @@
-﻿using CalculatorUnitTests.Driver;
+﻿using WindowsAppDriver.Driver;
 
-namespace CalculatorUnitTests.Helper
+namespace WindowsAppDriver.Helper
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Calculator
     {
         private readonly WinAppDriver _driver;
