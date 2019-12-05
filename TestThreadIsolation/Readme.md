@@ -1,7 +1,7 @@
 ﻿# Test Thread Isolation Example
 
-This example demonstrates the difference between SharedAppDomain, AppDomain and 
-Process Isolation. 
+This example demonstrates the difference between SharedAppDomain, AppDomain and
+Process Isolation.
 
 ## Config
 
@@ -18,18 +18,21 @@ no need to spawn seperate AppDomains or processes. Additionally [BeforeTestRun] 
 [AfterTestRun] is only executed once.
 
 ## AppDomain (Default)
+
 In AppDomain mode the tests runs every thread runs in a seperate AppDomain.
 That means that static data is not shared and the threads are protected from each other.
-There is however still the possibility of shared memory, for example when using a 
+There is however still the possibility of shared memory, for example when using a
 shared in-memory SQLite database. This mode runs slower than SharedAppDomain but
 has the advantage of thread protection
 
 ## Process
+
 In Process mode the tests run in seperate processes. That means that nothing is shared
 between them and it offers the highest form of protection. On the other hand it is
 also the slowest mode of execution.
 
 ## Further information
+
 [SpecFlow Documentation: Parallel Execution](https://specflow.org/documentation/Parallel-Execution/)
 
 [Profile Configuration](https://specflow.org/plus/documentation/SpecFlowPlus-Runner-Profiles/#Environment)
