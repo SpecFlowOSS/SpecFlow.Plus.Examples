@@ -19,14 +19,20 @@ namespace TestApplication.UiTests.Support
         [AfterStep]
         public void MakeScreenshotAfterStep()
         {
-            if (_webDriver.Current is ITakesScreenshot takesScreenshot)
+            if (!(_webDriver.Current is ITakesScreenshot takesScreenshot))
             {
-                var screenshot = takesScreenshot.GetScreenshot();
-                var tempFileName = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileNameWithoutExtension(Path.GetTempFileName())) + ".jpg";
-                screenshot.SaveAsFile(tempFileName, ScreenshotImageFormat.Jpeg);
-
-                Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
+                return;
             }
+
+            var screenshot = takesScreenshot.GetScreenshot();
+
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(Path.GetTempFileName());
+            string fileName = $"{fileNameWithoutExtension}.png";
+            string tempFileName = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+
+            screenshot.SaveAsFile(tempFileName, ScreenshotImageFormat.Png);
+
+            Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
         }
     }
 }

@@ -1,60 +1,52 @@
 ﻿using System;
-using System.Configuration;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
 namespace TestApplication.UiTests.Drivers
 {
-    public class WebDriver
+    public class WebDriver : IDisposable
     {
-        private IWebDriver _currentWebDriver;
-        private WebDriverWait _wait;
+        private readonly BrowserSeleniumDriverFactory _browserSeleniumDriverFactory;
+        private readonly Lazy<IWebDriver> _currentWebDriverLazy;
+        private readonly Lazy<WebDriverWait> _waitLazy;
+        private readonly TimeSpan _waitDuration = TimeSpan.FromSeconds(10);
+        private bool _isDisposed;
 
-        public string SeleniumBaseUrl => ConfigurationManager.AppSettings["seleniumBaseUrl"];
-
-        public IWebDriver Current
+        public WebDriver(BrowserSeleniumDriverFactory browserSeleniumDriverFactory)
         {
-            get
-            {
-                if (_currentWebDriver == null)
-                {
-                    _currentWebDriver = GetWebDriver();
-                }
-
-                return _currentWebDriver;
-            }
+            _browserSeleniumDriverFactory = browserSeleniumDriverFactory;
+            _currentWebDriverLazy = new Lazy<IWebDriver>(GetWebDriver);
+            _waitLazy = new Lazy<WebDriverWait>(GetWebDriverWait);
         }
 
-        public WebDriverWait Wait
+        public IWebDriver Current => _currentWebDriverLazy.Value;
+
+        public WebDriverWait Wait => _waitLazy.Value;
+
+        private WebDriverWait GetWebDriverWait()
         {
-            get
-            {
-                if (_wait == null)
-                {
-                    this._wait = new WebDriverWait(Current, TimeSpan.FromSeconds(10));
-                }
-                return _wait;
-            }
+            return new WebDriverWait(Current, _waitDuration);
         }
 
         private IWebDriver GetWebDriver()
         {
-            switch (Environment.GetEnvironmentVariable("Test_Browser"))
-            {
-                case "IE": return new InternetExplorerDriver(new InternetExplorerOptions { IgnoreZoomLevel = true }) { Url = SeleniumBaseUrl };
-                case "Chrome": return new ChromeDriver { Url = SeleniumBaseUrl };
-                case "Firefox": return new FirefoxDriver { Url = SeleniumBaseUrl };
-                case string browser: throw new NotSupportedException($"{browser} is not a supported browser");
-                default: throw new NotSupportedException("not supported browser: <null>");
-            }
+            string testBrowserId = Environment.GetEnvironmentVariable("Test_Browser");
+            return _browserSeleniumDriverFactory.GetForBrowser(testBrowserId);
         }
 
-        public void Quit()
+        public void Dispose()
         {
-            _currentWebDriver?.Quit();
+            if (_isDisposed)
+            {
+                return;
+            }
+
+            if (_currentWebDriverLazy.IsValueCreated)
+            {
+                Current.Quit();
+            }
+
+            _isDisposed = true;
         }
     }
 }
