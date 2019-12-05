@@ -1,19 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="SpecFlow" Version="3.1.62" />
-    <PackageReference Include="SpecFlow.xUnit" Version="3.1.62" />
-    <PackageReference Include="SpecFlow.Tools.MSBuild.Generation" Version="3.1.62" />
-    <!-- <PackageReference Include="SpecRun.SpecFlow.3-0-0" Version="3.0.21-beta" /> -->
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="SpecFlow" Version="3.1.67" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.67" />
+    <PackageReference Include="SpecRun.Runner" Version="3.1.37" />
+    <PackageReference Include="SpecRun.SpecFlow.3-1-0" Version="3.1.37" />
   </ItemGroup>
 
 </Project>
