@@ -10,11 +10,6 @@
     <Template name="Report\ReportTemplate.cshtml"/>
   </Report>
   
-  <DeploymentTransformation>    
-    <Steps>
-      <IISExpress webAppFolder="..\..\..\TestApplication" port="58909"/>
-    </Steps>
-  </DeploymentTransformation>
   <Targets>
     <Target name="IE">
       <Filter>Browser_IE</Filter>

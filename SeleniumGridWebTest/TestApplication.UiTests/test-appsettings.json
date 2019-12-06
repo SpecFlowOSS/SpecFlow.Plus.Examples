@@ -1,0 +1,4 @@
+{
+  "seleniumHub": "http://localhost:4444/wd/hub",
+  "seleniumBaseUrl": "https://localhost:58909"
+}

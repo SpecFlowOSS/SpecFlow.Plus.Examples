@@ -8,7 +8,7 @@
 @Browser_Firefox
 @BasePage
 Scenario: Basepage is Calculator
-	Given I navigated to the Calculator page
+	When I navigate to the Calculator page
 	Then browser title should be 'Calculator'
 
 @Browser_IE 

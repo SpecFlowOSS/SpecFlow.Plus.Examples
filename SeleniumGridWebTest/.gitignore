@@ -1,0 +1,3 @@
+*.feature.cs
+
+TestApplication.Web/wwwroot/lib/

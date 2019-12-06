@@ -14,6 +14,7 @@ namespace TestApplication.UiTests.Steps
         }
 
         [Given(@"I navigated to the Calculator page")]
+        [When(@"I navigate to the Calculator page")]
         public void GivenINavigatedToTheCalculatorPage()
         {
             _calculatorPageDriver.GoToCalculatorPage();

@@ -44,6 +44,7 @@ namespace TestApplication.Web
                                         listenOptions.UseHttps();
                                     });
                                 });
+                            //webBuilder.UseUrls("http://localhost:58901", "http://localhost:5000");
                             webBuilder.UseStartup<Startup>();
                         });
 
