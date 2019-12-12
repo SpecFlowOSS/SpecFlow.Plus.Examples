@@ -1,9 +1,8 @@
-﻿using System.Diagnostics;
-using CalculatorUnitTests.Helper;
+﻿using WindowsAppDriver.Helper;
 using FluentAssertions;
 using TechTalk.SpecFlow;
 
-namespace CalculatorUnitTests.Steps
+namespace WindowsAppDriver.Steps
 {
     [Binding]
     public class CalculatorFeatureSteps

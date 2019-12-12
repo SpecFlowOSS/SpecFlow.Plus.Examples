@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Configuration;
 using System.Diagnostics;
 using System.IO;
-using CalculatorUnitTests.Driver;
-using CalculatorUnitTests.Helper;
+using WindowsAppDriver.Driver;
+using WindowsAppDriver.Helper;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-namespace CalculatorUnitTests.Steps
+namespace WindowsAppDriver.Steps
 {
     [Binding]
     public class CalculatorFeatureSteps
@@ -26,7 +24,9 @@ namespace CalculatorUnitTests.Steps
         {
             try
             {
-                _driver = Process.Start(ConfigurationManager.AppSettings["winAppPath"]);
+                var configurationDriver = new ConfigurationDriver();
+                string winAppDriverPath = configurationDriver.Configuration["winAppPath"];
+                _driver = Process.Start(winAppDriverPath);
             }
             catch (Exception e)
             {

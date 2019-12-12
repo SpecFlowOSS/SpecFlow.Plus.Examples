@@ -7,9 +7,8 @@
     <TestAssemblyPath>TestApplication.UiTests.dll</TestAssemblyPath>
   </TestAssemblyPaths>
  
-  <DeploymentTransformation>    
+  <DeploymentTransformation>
     <Steps>
-      <IISExpress webAppFolder="..\..\..\TestApplication" port="58909"/>
       <ConfigFileTransformation configFile="App.config" >
         <Transformation>
           <![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -27,12 +26,21 @@
   <Targets>
     <Target name="IE">
       <Filter>Browser_IE</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="IE" />
+      </DeploymentTransformationSteps>
     </Target>
     <Target name="Chrome">
-      <Filter>Browser_Chrome</Filter>      
+      <Filter>Browser_Chrome</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="Chrome" />
+      </DeploymentTransformationSteps>
     </Target>
     <Target name="Firefox">
       <Filter>Browser_Firefox</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="Firefox" />
+      </DeploymentTransformationSteps>
     </Target>
   </Targets>
 </TestProfile>

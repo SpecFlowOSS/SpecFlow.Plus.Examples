@@ -1,61 +1,52 @@
 ﻿using System;
-using System.Configuration;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 
 namespace TestApplication.UiTests.Drivers
 {
-    public class WebDriver
+    public class WebDriver : IDisposable
     {
-        private IWebDriver _currentWebDriver;
+        private readonly BrowserSeleniumDriverFactory _browserSeleniumDriverFactory;
+        private readonly Lazy<IWebDriver> _currentWebDriverLazy;
+        private readonly Lazy<WebDriverWait> _waitLazy;
+        private readonly TimeSpan _waitDuration = TimeSpan.FromSeconds(10);
+        private bool _isDisposed;
 
-        public IWebDriver Current
+        public WebDriver(BrowserSeleniumDriverFactory browserSeleniumDriverFactory)
         {
-            get
-            {
-                if (_currentWebDriver != null)
-                    return _currentWebDriver;
-                DriverOptions desiredCapabilities;
-
-                switch (BrowserConfig)
-                {
-                    case "IE":
-                        desiredCapabilities = new InternetExplorerOptions();
-                        break;
-                    case "Chrome":
-                        desiredCapabilities = new ChromeOptions();
-                        break;
-                    case "Firefox":
-                        desiredCapabilities = new FirefoxOptions();
-                        break;
-                    default:
-                        throw new NotSupportedException($"{BrowserConfig} is not a supported browser");
-                }
-
-                _currentWebDriver = new RemoteWebDriver(new Uri(ConfigurationManager.AppSettings["seleniumHub"]), desiredCapabilities);
-
-                return _currentWebDriver;
-            }
+            _browserSeleniumDriverFactory = browserSeleniumDriverFactory;
+            _currentWebDriverLazy = new Lazy<IWebDriver>(GetWebDriver);
+            _waitLazy = new Lazy<WebDriverWait>(GetWebDriverWait);
         }
 
-        private WebDriverWait _wait;
-        public WebDriverWait Wait => _wait ?? (_wait = new WebDriverWait(Current, TimeSpan.FromSeconds(10)));
+        public IWebDriver Current => _currentWebDriverLazy.Value;
 
-        protected string BrowserConfig => ConfigurationManager.AppSettings["browser"];
-        protected string SeleniumBaseUrl => ConfigurationManager.AppSettings["seleniumBaseUrl"];
+        public WebDriverWait Wait => _waitLazy.Value;
 
-        public void Quit()
+        private WebDriverWait GetWebDriverWait()
         {
-            if (_currentWebDriver != null)
+            return new WebDriverWait(Current, _waitDuration);
+        }
+
+        private IWebDriver GetWebDriver()
+        {
+            string testBrowserId = Environment.GetEnvironmentVariable("Test_Browser");
+            return _browserSeleniumDriverFactory.GetForBrowser(testBrowserId);
+        }
+
+        public void Dispose()
+        {
+            if (_isDisposed)
             {
-                _currentWebDriver.Quit();
-                _currentWebDriver.Dispose();
-                _currentWebDriver = null;
+                return;
             }
+
+            if (_currentWebDriverLazy.IsValueCreated)
+            {
+                Current.Quit();
+            }
+
+            _isDisposed = true;
         }
     }
 }

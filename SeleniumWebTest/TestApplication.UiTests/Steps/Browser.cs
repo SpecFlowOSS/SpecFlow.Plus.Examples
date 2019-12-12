@@ -8,35 +8,17 @@ namespace TestApplication.UiTests.Steps
     [Binding]
     public class Browser
     {
-        private readonly WebDriver _webDriver;
+        private readonly BrowserDriver _browserDriver;
 
-        public Browser(WebDriver webDriver)
+        public Browser(BrowserDriver browserDriver)
         {
-            _webDriver = webDriver;
+            _browserDriver = browserDriver;
         }
 
-        [Given(@"I navigated to (.*)")]
-        public void GivenINavigatedTo(string url)
+        [Then(@"browser title should be '(.*)'")]
+        public void ThenBrowserTitleIs(string expectedTitle)
         {
-            var driver = _webDriver.Current;
-            driver.Manage().Window.Maximize();
-            string baseUrl = ConfigurationManager.AppSettings["seleniumBaseUrl"];
-            driver.Navigate().GoToUrl(string.Format("{0}{1}", baseUrl, url));
-        }
-
-        [Then(@"browser title is (.*)")]
-        public void ThenBrowserTitleIs(string title)
-        {
-            var result = _webDriver.Wait.Until(d => d.Title);
-
-            result.Should().Be(title);
-        }
-
-
-        [AfterScenario()]
-        public void CloseBrowserAfterTest()
-        {
-            _webDriver.Quit();
+            _browserDriver.ValidateTitleShouldBe(expectedTitle);
         }
     }
 }

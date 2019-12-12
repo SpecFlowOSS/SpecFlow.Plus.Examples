@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FluentAssertions;
 using TechTalk.SpecFlow;
 using TestCalculator;
 
@@ -44,7 +44,7 @@ namespace TestThreadIsolation.Steps
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
-            Assert.AreEqual(expectedResult,_calculator.Result);
+            _calculator.Result.Should().Be(expectedResult);
             Console.WriteLine(_calculator.GetType());
         }
     }

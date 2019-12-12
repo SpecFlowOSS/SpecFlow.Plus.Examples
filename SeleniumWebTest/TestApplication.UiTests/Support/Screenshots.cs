@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing.Imaging;
 using System.IO;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -8,7 +7,7 @@ using TestApplication.UiTests.Drivers;
 namespace TestApplication.UiTests.Support
 {
     [Binding]
-    class Screenshots
+    public class Screenshots
     {
         private readonly WebDriver _webDriver;
 
@@ -17,18 +16,23 @@ namespace TestApplication.UiTests.Support
             _webDriver = webDriver;
         }
 
-        [AfterStep()]
+        [AfterStep]
         public void MakeScreenshotAfterStep()
         {
-            var takesScreenshot = _webDriver.Current as ITakesScreenshot;
-            if (takesScreenshot != null)
+            if (!(_webDriver.Current is ITakesScreenshot takesScreenshot))
             {
-                var screenshot = takesScreenshot.GetScreenshot();
-                var tempFileName = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileNameWithoutExtension(Path.GetTempFileName())) + ".jpg";
-                screenshot.SaveAsFile(tempFileName, ScreenshotImageFormat.Jpeg);
-
-                Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
+                return;
             }
+
+            var screenshot = takesScreenshot.GetScreenshot();
+
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(Path.GetTempFileName());
+            string fileName = $"{fileNameWithoutExtension}.png";
+            string tempFileName = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+
+            screenshot.SaveAsFile(tempFileName, ScreenshotImageFormat.Png);
+
+            Console.WriteLine($"SCREENSHOT[ file:///{tempFileName} ]SCREENSHOT");
         }
     }
 }
