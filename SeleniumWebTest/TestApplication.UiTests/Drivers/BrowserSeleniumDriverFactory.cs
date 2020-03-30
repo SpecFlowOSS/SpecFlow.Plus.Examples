@@ -1,18 +1,22 @@
 ﻿using System;
+using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using TechTalk.SpecRun;
 
 namespace TestApplication.UiTests.Drivers
 {
     public class BrowserSeleniumDriverFactory
     {
         private readonly ConfigurationDriver _configurationDriver;
+        private readonly TestRunContext _testRunContext;
 
-        public BrowserSeleniumDriverFactory(ConfigurationDriver configurationDriver)
+        public BrowserSeleniumDriverFactory(ConfigurationDriver configurationDriver, TestRunContext testRunContext)
         {
             _configurationDriver = configurationDriver;
+            _testRunContext = testRunContext;
         }
 
         public IWebDriver GetForBrowser(string browserId)
@@ -30,15 +34,16 @@ namespace TestApplication.UiTests.Drivers
 
         private IWebDriver GetFirefoxDriver()
         {
-            return new FirefoxDriver
+            return new FirefoxDriver(FirefoxDriverService.CreateDefaultService(_testRunContext.TestDirectory))
             {
-                Url = _configurationDriver.SeleniumBaseUrl
+                Url = _configurationDriver.SeleniumBaseUrl,
+
             };
         }
 
         private IWebDriver GetChromeDriver()
         {
-            return new ChromeDriver
+            return new ChromeDriver(ChromeDriverService.CreateDefaultService(_testRunContext.TestDirectory))
             {
                 Url = _configurationDriver.SeleniumBaseUrl
             };
@@ -48,11 +53,15 @@ namespace TestApplication.UiTests.Drivers
         {
             var internetExplorerOptions = new InternetExplorerOptions
             {
-                IgnoreZoomLevel = true
+                IgnoreZoomLevel = true,
+
+
             };
-            return new InternetExplorerDriver(internetExplorerOptions)
+            return new InternetExplorerDriver(InternetExplorerDriverService.CreateDefaultService(_testRunContext.TestDirectory), internetExplorerOptions)
             {
-                Url = _configurationDriver.SeleniumBaseUrl
+                Url = _configurationDriver.SeleniumBaseUrl,
+
+
             };
         }
     }

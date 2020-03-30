@@ -6,15 +6,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="78.0.3904.10500" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="80.0.3987.10600" />
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.26.0" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1" />
     <PackageReference Include="SpecFlow" Version="3.1.89" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.89" />
-    <PackageReference Include="SpecRun.Runner" Version="3.1.53" />
-    <PackageReference Include="SpecRun.SpecFlow.3-1-0" Version="3.1.53" />
-    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="SpecRun.Runner" Version="3.2.13" />
+    <PackageReference Include="SpecRun.SpecFlow.3-1-0" Version="3.2.13" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Appium.WebDriver" Version="4.1.1" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />

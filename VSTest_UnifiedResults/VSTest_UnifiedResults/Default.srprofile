@@ -3,7 +3,7 @@
   <Settings projectName="VSTest_UnifiedResults" projectId="{c334d128-ef61-4429-bf11-3d7f51da576d}" />
   <Execution testThreadCount="1" testSchedulingMode="Sequential"  retryCount="2" retryFor="Failing"/>
 
-  <VSTest testRetryResults="Unified" passRateAbsolute="1" />
+  <!--<VSTest testRetryResults="Unified" passRateAbsolute="1" />-->
 
   <TestAssemblyPaths>
     <TestAssemblyPath>VSTest_UnifiedResults.dll</TestAssemblyPath>
