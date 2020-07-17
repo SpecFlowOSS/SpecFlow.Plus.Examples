@@ -7,10 +7,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="SpecFlow" Version="3.3.30" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.3.30" />
-    <PackageReference Include="SpecRun.Runner" Version="3.3.14" />
-    <PackageReference Include="SpecRun.SpecFlow.3-3-0" Version="3.3.14" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.3.41" />
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
     <PackageReference Include="Appium.WebDriver" Version="4.1.1" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
