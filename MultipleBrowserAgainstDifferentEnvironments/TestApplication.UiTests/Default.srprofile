@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="TestApplication.UiTests" projectId="{347ddf1e-cf82-4520-8c9b-724ed9d7f5f0}" />
+  <Execution stopAfterFailures="0" testThreadCount="1" testSchedulingMode="Sequential" retryCount="0" apartmentState="MTA"  />
+  <Environment testThreadIsolation="Process" platform="x86"/>
+  <TestAssemblyPaths>
+    <TestAssemblyPath>TestApplication.UiTests.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+  <Report>
+    <Template name="Report\ReportTemplate.cshtml"/>
+  </Report>
+  
+  <Targets>
+    <Target name="IE">
+      <Filter>Browser_IE</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="IE" />
+      </DeploymentTransformationSteps>
+    </Target>
+    <Target name="Chrome">
+      <Filter>Browser_Chrome</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="Chrome" />
+      </DeploymentTransformationSteps>
+    </Target>
+    <Target name="Firefox">
+      <Filter>Browser_Firefox</Filter>
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="Test_Browser" value="Firefox" />
+      </DeploymentTransformationSteps>
+    </Target>
+  </Targets>
+</TestProfile>
