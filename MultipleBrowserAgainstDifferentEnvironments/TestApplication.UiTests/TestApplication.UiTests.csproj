@@ -21,13 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../TestApplication.Web/TestApplication.Web.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="test-appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Support\" />
   </ItemGroup>
 
 </Project>
