@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Targets>
+    <Target name="Target1">
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="RUNNER_TARGET" value="Target1" />
+      </DeploymentTransformationSteps>
+    </Target>
+    <Target name="Target2">
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="RUNNER_TARGET" value="Target2" />
+      </DeploymentTransformationSteps>
+    </Target>
+  </Targets>
+</TestProfile>
