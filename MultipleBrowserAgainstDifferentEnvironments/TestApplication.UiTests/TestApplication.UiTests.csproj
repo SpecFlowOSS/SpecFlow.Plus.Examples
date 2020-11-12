@@ -7,13 +7,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="84.0.4147.3001" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="86.0.4240.2200" />
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.27.0" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1.2" />
-    <PackageReference Include="SpecFlow" Version="3.4.3" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.4.3" />
     
-    <PackageReference Include="SpecRun.SpecFlow" Version="3.4.5" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.5.8" />
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Appium.WebDriver" Version="4.1.1" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
