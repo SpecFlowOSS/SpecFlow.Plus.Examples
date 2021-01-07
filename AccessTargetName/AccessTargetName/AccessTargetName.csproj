@@ -8,7 +8,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
 
     
-    <PackageReference Include="SpecRun.SpecFlow" Version="3.3.41" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.5.22" />
     
 
     
