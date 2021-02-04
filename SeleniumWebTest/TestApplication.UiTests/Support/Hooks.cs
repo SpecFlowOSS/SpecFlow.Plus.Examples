@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using TechTalk.SpecFlow;
 using TestApplication.UiTests.Drivers;
@@ -24,7 +21,7 @@ namespace TestApplication.UiTests.Support
         [AfterTestRun]
         public static void StopKestrel()
         {
-            _build.StopAsync();
+            _build.Dispose();
         }
 
         private static IHostBuilder CreateHostBuilder(ConfigurationDriver configurationDriver)
