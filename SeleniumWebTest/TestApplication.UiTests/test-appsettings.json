@@ -1,4 +1,4 @@
 {
-  "seleniumBaseUrl": "https://localhost:58909",
+  "seleniumBaseUrl": "http://localhost:58909",
   "browser": ""
 }
