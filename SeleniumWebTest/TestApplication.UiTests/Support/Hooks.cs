@@ -9,19 +9,19 @@ namespace TestApplication.UiTests.Support
     [Binding]
     public class Hooks
     {
-        private static IHost _build;
+        private static IHost _host;
 
         [BeforeTestRun]
         public static void StartKestrel(ConfigurationDriver configurationDriver)
         {
-            _build = CreateHostBuilder(configurationDriver).Build();
-            _build.StartAsync();
+            _host = CreateHostBuilder(configurationDriver).Build();
+            _host.StartAsync();
         }
 
         [AfterTestRun]
         public static void StopKestrel()
         {
-            _build.Dispose();
+            _host.Dispose();
         }
 
         private static IHostBuilder CreateHostBuilder(ConfigurationDriver configurationDriver)
