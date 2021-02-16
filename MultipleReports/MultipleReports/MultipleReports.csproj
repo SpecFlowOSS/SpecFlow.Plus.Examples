@@ -21,7 +21,7 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
-    <PackageReference Include="SpecRun.SpecFlow" Version="3.6.2" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="*" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
