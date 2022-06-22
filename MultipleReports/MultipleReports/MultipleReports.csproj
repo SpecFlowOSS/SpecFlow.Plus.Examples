@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="SpecRun.SpecFlow" Version="*" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
